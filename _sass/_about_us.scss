@@ -1,0 +1,24 @@
+.foundation__text {
+  text-align: right;
+}
+
+.foundation__members {
+  @extend .nostyle;
+}
+
+.avatar-list {
+  @extend .nostyle;
+
+  display: flex;
+}
+
+.avatar-list__item {
+  margin: 0 20px;
+}
+
+.avatar {
+  @extend .nostyle;
+
+  width: 100px;
+  border-radius: 50%;
+}

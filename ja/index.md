@@ -1,51 +1,85 @@
 ---
 title: The Vivliostyle Project
-aside: true
 lang: ja
-aside-type: blog-entries
-# feature_text: |
-#   ## Vivliostyle
-#   CSS Typesetting
-feature_image: "/assets/header-image.png"
+jumbotron_image: true
 excerpt: "open source, web browser based CSS typesetting engine project"
 ---
 
-Vivliostyle は、電子出版＝ Web 出版の時代にマッチする新しい組版エンジンを、Web 標準技術で作るオープンソース・プロジェクトです。
+{% capture section1_description %}
+Vivliostyle Pub を使えば、EPUBや印刷可能なPDFをブラウザ上で作成できます。
 
-- Web ブラウザの組版をもっと良くして Web・電子出版と印刷出版の共通の組版エンジンに
-- CSS 組版機能を JavaScript で実装
-- CSS 組版関連仕様の W3C 標準化と連携して実装を推進
+HTMLとCSSを用意すれば、CLIでもEPUBやPDFを作成できます。
+{% endcapture %}
 
-☞ Check the latest [**Vivliostyle Viewer**](https://vivliostyle.org/viewer/)
 
-## Vivliostyle Foundation について
+{% capture section2_description %}
+Vivliostyle Viewer を使えば、EPUBやWeb上の文書を〜〜
+{% endcapture %}
 
-私たちは、オープンな標準技術で Web と出版・印刷の世界をひとつにするオープンソースの組版ソフトウェア Vivliostyle の開発、公開、普及を促進することにより、これまで印刷の歴史とともに培われてきた組版の技術を Web と電子出版において継承・進化させて、これからの世界の学術・文芸・情報コミュニケーションの発展に欠かせない出版の電子化とアクセシビリティの向上に寄与することを目指し、次のような活動を行います。
 
-- Vivliostyle オープンソース・プロジェクトとコミュニティの維持管理
-- Vivliostyle と関連技術の研究開発
-- Vivliostyle と CSS 組版の普及啓発・教育
-- Web・出版・アクセシビリティ等の標準技術に関する諸団体と連携して標準化推進
-- Vivliostyle と連携する外部のプロジェクトとの協力
+{% capture section3_description %}
+coreがあって役割ごとにn個の小プロジェクトがありますよみたいな説明
+{% endcapture %}
 
-<div style="margin: 2em 0 1em; text-align: right">
-<div><strong><ruby>Vivliostyle Foundation<rt style="font-size: 75%">一般社団法人ビブリオスタイル</rt></ruby></strong></div>
-<div>2018年8月&ensp;設立</div>
-<br>
-{% assign people = "murakami, florian, johannes" | split: ", " %}
-{% for a in people %}
-<div><strong><a href="mailto:{{ site.data.people[a].email }}">{{ site.data.people[a].ja }}</a></strong>&ensp;({{ site.data.people[a].role_ja }})</div>
-{% endfor %}
-</div>
 
----------
+{% capture section5_description %}
+Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合〜〜
 
-| 名称 | 一般社団法人ビブリオスタイル (Vivliostyle Foundation) |
-| 所在地 | 〒336-0015 埼玉県さいたま市南区太田窪1941-84 |
-| 代表者 | 代表理事　村上 真雄 (MURAKAMI Shinyu) |
-| 連絡先(電話) | 090-3688-2212 |
-| 連絡先(メール) | mail@vivliostyle.org |
+開発ガイド、ドキュメントは [開発のてびき]() を〜〜
+{% endcapture %}
 
----------
 
-{% include nav-share.html %}
+{% assign posts = site.posts | where: "lang", page.lang | slice: 0, 3 %}
+
+
+{% include page/index.html
+  section1_title="CSS組版で本を作りたい！"
+  section1_description=section1_description
+
+  section2_title="EPUBやWeb上の文書を、好みのスタイルで読みたい！"
+  section2_description=section2_description
+
+  section3_title="Vivliostyle プロジェクトとは？"
+  section3_description=section3_description
+
+  section4_title="最近のブログ"
+  section4_description=section4_description
+
+  section5_title="一緒に開発しませんか"
+  section5_description=section5_description
+
+  slack_buttontext="Slackに参加"
+  github_buttontext="開発に参加"
+
+  posts=posts
+
+  animation1_src="/assets/animation1.png"
+  animation2_src="/assets/animation2.png"
+  animation3_src="/assets/animation3.png"
+
+  core_thumbnail="/assets/project-core.png"
+  pub_thumbnail="/assets/project-pub.png"
+  cli_thumbnail="/assets/project-cli.png"
+  viewer_thumbnail="/assets/project-viewer.png"
+
+  project1_src="/assets/project1.png"
+  project2_src="/assets/project2.png"
+  project3_src="/assets/project3.png"
+  project4_src="/assets/project4.png"
+  project_core_description="〜〜"
+  project_pub_description="〜〜"
+  project_cli_description="〜〜"
+  project_viewer_description="〜〜"
+
+  pub_buttontext="ブラウザで作る"
+  pub_buttonsampletext="作成例を見る"
+  cli_buttontext="コマンドで作る"
+  viewer_buttontext="Vivliostyle Viewer で読む"
+  or_text="または"
+
+  core_link=""
+  pub_samplelink=""
+  pub_link=""
+  cli_link=""
+  viewer_link=""
+%}

@@ -1,0 +1,9 @@
+<section class="section">
+  <h2>{{ include.title }}</h2>
+
+  {% for content in include.contents %}
+  <div class="container">
+    {{ content | markdownify }}
+  </div>
+  {% endfor %}
+</section>

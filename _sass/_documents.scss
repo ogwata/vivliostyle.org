@@ -1,0 +1,14 @@
+.section {
+  .plan-list {
+    @extend .nostyle;
+  }
+
+  .plan__thumbnail {
+    width: 210px;
+    margin-left: 20px;
+  }
+
+  .plan__text {
+    font-weight: 400;
+  }
+}

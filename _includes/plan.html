@@ -1,0 +1,18 @@
+<div class="frame--medium">
+  <div class="frame__contents">
+    <div class="plan__text">
+      <h3 class="plan__title">{{ include.title }}</h3>
+      <p class="plan__description">
+        {{ include.description | markdownify }}
+      </p>
+    </div>
+
+    {% if include.thumbnail %}
+      <div>
+        <a href="{{ site.baseurl }}{{ include.url }}" class="frame__link">
+          <img src="{{ include.thumbnail }}" alt="" class="plan__thumbnail">
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>

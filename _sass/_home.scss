@@ -1,0 +1,252 @@
+.the-vivliostyle-project {
+  .section {
+    margin: 0;
+    padding: 64px 180px;
+    font-size: $display_font_size;
+    color: $gray_dark;
+
+    .thumbnail-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .thumbnail-list__item {
+      width: 320px;
+      margin: 0 50px;
+
+      img {
+        @extend .nostyle;
+      }
+    }
+
+    .button-list {
+      justify-content: center;
+    }
+
+    .project__list {
+      list-style: none;
+      padding: 0;
+
+      .project__innerlist {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .project__link {
+        font-size: $h4_font_size;
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+          color: $text_color;
+        }
+      }
+
+      .project__description {
+        font-size: $body_font_size;
+      }
+    }
+  }
+
+  .section--gray {
+    @extend .section--center;
+
+    background-color: $gray_lighter;
+  }
+
+  #animation--flow {
+    @extend .nostyle;
+
+    display: flex;
+    justify-content: center;
+
+    .animation__img {
+      max-width: 340px;
+      margin-bottom: 50px;
+      transform: scale(0);
+    }
+
+    .animation__line {
+      display: flex;
+      align-items: center;
+      line-height: normal;
+    }
+
+    .animation__bar {
+      flex: auto;
+      height: 6px;
+      border-radius: 3px;
+      background-color: $gray_light;
+      background-size: 200%;
+      background-position: 100% 0%;
+    }
+
+    .animation__bar--none {
+      @extend .animation__bar;
+
+      background-color: transparent;
+    }
+
+    .animation__bar--left {
+      @extend .animation__bar;
+
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .animation__bar--right {
+      @extend .animation__bar;
+
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .animation__label {
+      padding: 10px 20px;
+      margin: 0 20px;
+      background-color: $gray_light;
+      color: $white;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    @keyframes img__appeal {
+      0% { transform: scale(0); }
+      80% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes step1__changecolor {
+      0% { background-color: $blue_dark; }
+      100% { background-color: $blue_dark; }
+    }
+
+    @keyframes step2__changecolor {
+      0% { background-color: $black; }
+      100% { background-color: $black; }
+    }
+
+    @keyframes step3__changecolor {
+      0% { background-color: $red; }
+      100% { background-color: $red; }
+    }
+
+    @keyframes line_progress {
+      0% { background-position: 100% 0%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    #step1__img {
+      animation: img__appeal 0.5s ease-in-out 0s forwards;
+    }
+
+    #step1__text {
+      animation: img__appeal 0.5s ease-in-out 0s forwards,
+      step1__changecolor 0.5s ease-in-out 0s forwards;
+    }
+
+    #step1__right {
+      background-image: linear-gradient(90deg, $blue_dark 50%, $gray_light 0%);
+      animation: line_progress 0.8s ease-in 0.2s forwards;
+    }
+
+    #step2__left {
+      background-image: linear-gradient(90deg, $blue_dark 50%, $gray_light 0%);
+      animation: line_progress 0.8s ease-out 1s forwards;
+    }
+
+    #step2__img {
+      animation: img__appeal 0.5s ease-in-out 1.8s forwards;
+    }
+
+    #step2__text {
+      animation: img__appeal 0.5s ease-in-out 1.8s forwards,
+      step2__changecolor 0.5s ease-in-out 1.8s forwards;
+    }
+
+    #step2__right {
+      background-image: linear-gradient(90deg, $red 50%, $gray_light 0%);
+      animation: line_progress 0.8s ease-in 2.1s forwards;
+    }
+
+    #step3__left {
+      background-image: linear-gradient(90deg, $red 50%, $gray_light 0%);
+      animation: line_progress 0.8s ease-out 2.9s forwards;
+    }
+
+    #step3__img {
+      animation: img__appeal 0.5s ease-in-out 3.7s forwards;
+    }
+
+    #step3__text {
+      animation: img__appeal 0.5s ease-in-out 3.7s forwards,
+      step3__changecolor 0.5s ease-in-out 3.7s forwards;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint_large) {
+    // 余白を縮める
+    .section {
+      padding: 64px 70px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint_small) {
+    // 余白を縮める
+    .section {
+      padding: 20px 10px;
+      font-size: 20px;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .button-list {
+        flex-direction: column;
+
+        .button {
+          margin: 10px 0;
+        }
+      }
+
+      .thumbnail-list__item {
+        margin: 0 10px;
+      }
+
+      .project__list {
+        margin-left: -40px;
+
+        .project__img {
+          margin: 10px 0;
+        }
+
+        .project__text {
+          line-height: 1;
+        }
+
+        .project__link {
+          font-size: 20px;
+        }
+
+        .project__description {
+          display: none;
+        }
+      }
+    }
+
+    #animation--flow {
+      .animation__img {
+        margin-bottom: 30px;
+      }
+
+      .animation__label {
+        margin: 0 5px;
+        padding: 5px 10px;
+        font-size: 15px;
+      }
+    }
+  }
+}

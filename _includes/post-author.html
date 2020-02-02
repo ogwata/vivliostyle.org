@@ -1,0 +1,17 @@
+{% if include.author %}
+  <ul class="post__authors">
+    {% for name in include.author %}
+      {% assign person = include.members[name] %}
+
+      <li class="author__item">
+        {% if person.email %}
+          <a href="mailto:{{ person.email }}" class="author__link">{{ person.name }}</a>
+        {% else %}
+          {{ person.name }}
+        {% endif %}
+
+        ({{ person.role }})
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

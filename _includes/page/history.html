@@ -1,0 +1,19 @@
+<section class="section">
+  <h2>
+    {{ include.history_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.adaptive_layout_description | markdownify }}
+    {% include avatar-list.html namelist=site.data.developer.adaptive_layout %}
+
+    {{ include.old_vivliostyle_dev_description | markdownify }}
+    {% include avatar-list.html namelist=site.data.developer.old_vivliostyle_dev %}
+
+    {{ include.old_vivliostyle_pullreq_description | markdownify }}
+    {% include avatar-list.html namelist=site.data.developer.old_vivliostyle_pullreq %}
+
+    {{ include.current_vivliostyle_description | markdownify }}
+    {% include avatar-list.html namelist=site.data.developer.current_vivliostyle %}
+  </div>
+</section>

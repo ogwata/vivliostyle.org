@@ -1,0 +1,13 @@
+<header class="post__header">
+  <time>{{ include.date | date: "%Y/%m/%d" }}</time>
+
+  <ul class="post__tags">
+    {% for tag in include.tags %}
+      <li class="post__tag">
+        <a href="{{ site.baseurl }}/blog/tags#{{ tag }}" class="button--small">
+          {{ tag }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</header>

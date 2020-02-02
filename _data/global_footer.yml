@@ -1,0 +1,66 @@
+en:
+  - title: getting_started
+    links:
+      - title: Vivliostyle Pub
+        url: /getting_started#Vivliostyle Pub
+      - title: Vivliostyle CLI
+        url: /getting_started#Vivliostyle CLI
+      - title: Vivliostyle Viewer
+        url: /getting_started#Vivliostyle Viewer
+  - title: documents
+    links:
+      - title: Documents
+        url: /documents
+      - title: Resources
+        url: /documents#resources
+      - title: License
+        url: /documents#License
+  - title: Community
+    links:
+      - title: About Us
+        url: /about_us
+      - title: Sponsors
+        url: /about_us#sponsors
+      - title: History
+        url: /history
+  - title: Others
+    links:
+      - title: Blog
+        url: /blog
+      - title: FAQ
+        url: /faq
+      - title: Brand Logo
+        url: /logo
+ja:
+  - title: 使ってみる
+    links:
+      - title: Vivliostyle Pub
+        url: /ja/getting_started#Vivliostyle Pub
+      - title: Vivliostyle CLI
+        url: /ja/getting_started#Vivliostyle CLI
+      - title: Vivliostyle Viewer
+        url: /ja/getting_started#Vivliostyle Viewer
+  - title: 開発する
+    links:
+      - title: ドキュメント一覧
+        url: /ja/documents#ドキュメント一覧
+      - title: 開発に必要なリソース
+        url: /ja/documents#開発に必要なリソース
+      - title: ライセンス
+        url: /ja/documents#ライセンス
+  - title: コミュニティ
+    links:
+      - title: About Us
+        url: /ja/about_us
+      - title: スポンサー募集
+        url: /ja/about_us#スポンサー募集
+      - title: Vivliostyle のなりたち
+        url: /ja/history
+  - title: その他
+    links:
+      - title: ブログ
+        url: /ja/blog
+      - title: FAQ
+        url: /ja/faq
+      - title: ロゴ
+        url: /ja/logo

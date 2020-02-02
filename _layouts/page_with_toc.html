@@ -1,0 +1,21 @@
+---
+layout: default
+toc: true
+---
+
+{% include site-header.html %}
+
+<main class="main">
+  <div class="with-toc">
+    {{ content }}
+
+    <div class="toc__container">
+      <nav class="toc__nav">
+        <ol class="toc-list" id="toc">
+        </ol>
+      </nav>
+    </div>
+  </div>
+</main>
+
+{% include site-footer.html %}

@@ -1,0 +1,8 @@
+image: "/assets/header-image.png"
+lead:
+  en:
+    - Vivliostyle is ...
+  ja:
+    - Vivliostyle は、電子出版 ＝ Web 出版の時代に
+    - マッチする新しい組版エンジンを Web 標準技術で
+    - 作るオープンソース・プロジェクトです。

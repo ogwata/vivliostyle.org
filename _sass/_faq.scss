@@ -1,0 +1,99 @@
+.with-toc {
+  display: flex;
+
+  .section {
+    flex: 2;
+    margin-right: 30px;
+    margin-top: calc(140px - 64px);
+  }
+
+  .toc__container {
+    flex: 1;
+  }
+
+  .toc__nav {
+    position: sticky;
+    margin-right: 180px;
+    padding-top: 60px;
+    top: 100px;
+  }
+
+  .toc-list {
+    list-style: none;
+  }
+
+  .toc-list__item {
+    margin: 5px 0;
+    line-height: normal;
+    font-size: $small_font_size;
+    border-radius: $border-radius;
+    transition: $hover_animation;
+    cursor: pointer;
+
+    &:hover {
+      @extend .toc-list__item--active;
+    }
+
+    a {
+      @extend .nostyle;
+
+      display: inline-block;
+      padding: 5px 10px;
+    }
+  }
+
+  .toc-list__item--active {
+    @extend .toc-list__item;
+
+    background-color: $blue_lighter;
+    font-weight: 700;
+  }
+
+  .toc-list__item--level2 {
+    @extend .toc-list__item;
+
+    margin-left: 0px;
+  }
+
+  .toc-list__item--level3 {
+    @extend .toc-list__item;
+
+    margin-left: 10px;
+  }
+
+  .toc-list__item--level4 {
+    @extend .toc-list__item;
+
+    margin-left: 20px;
+  }
+
+  .toc-list__item--level5 {
+    @extend .toc-list__item;
+
+    margin-left: 30px;
+  }
+
+  .toc-list__item--level6 {
+    @extend .toc-list__item;
+
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: $breakpoint_large) {
+  .with-toc {
+    flex-direction: column-reverse;
+
+    .toc__nav {
+      margin: 0 70px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint_small) {
+  .with-toc {
+    .toc__nav {
+      margin: 0;
+    }
+  }
+}

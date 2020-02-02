@@ -1,0 +1,171 @@
+.section {
+  margin: 64px 180px;
+
+  &:first-child {
+    margin-top: 140px;
+  }
+
+  &:last-child {
+    margin-bottom: 140px;
+  }
+
+  .tip {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 16px;
+    background-color: $black;
+    color: $white;
+    font-size: 14px;
+    border-radius: 20px;
+    font-family: $monospace_font;
+  }
+
+  .container {
+    > p {
+      margin: 20px 0;
+    }
+
+    .button-list {
+      margin: 30px 0;
+    }
+
+    img {
+      margin: 30px auto;
+      max-width: 800px;
+    }
+
+    img.nostyle {
+      margin: unset;
+      max-width: unset;
+    }
+
+    ol,
+    ul {
+      padding-left: 40px;
+    }
+
+    ol.nostyle,
+    ul.nostyle {
+      padding-left: unset;
+      list-style: none;
+    }
+
+    blockquote {
+      color: $gray;
+      border-left: 5px solid $gray_light;
+      margin-left: 5px;
+      padding-left: 15px;
+    }
+
+    pre {
+      font-family: $monospace_font;
+      font-size: $monospace_font_size;
+      padding: 20px 40px;
+      background: $black;
+      color: $white;
+      white-space: pre-wrap;
+    }
+  }
+
+  .frame {
+    border: 2px solid $gray_lighter;
+    border-radius: $border-radius;
+    margin: 20px 0;
+
+    > .heading {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .frame--large {
+    @extend .frame;
+
+    padding: 60px 80px;
+  }
+
+  .frame--medium {
+    @extend .frame;
+
+    padding: 40px 60px;
+
+    .heading__link {
+      @extend .nostyle;
+    }
+  }
+
+  .frame__contents {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .frame__link {
+    @extend .nostyle
+  }
+
+  .gallery {
+    @extend .nostyle;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 -30px;
+  }
+
+  .gallery__item {
+    width: 350px;
+    margin: 0 30px 30px 0;
+  }
+
+  .gallery__img {
+    @extend .nostyle;
+  }
+
+  .gallery__name {
+    margin-top: 10px;
+  }
+}
+
+.section--center {
+  @extend .section;
+
+  text-align: center;
+
+  .heading__link {
+    @extend .nostyle;
+  }
+}
+
+@media screen and (max-width: $breakpoint_large) {
+  // 余白を縮める
+  .section {
+    margin: 40px 70px;
+
+    &:first-child {
+      margin-top: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint_small) {
+  // 余白を縮める
+  .section {
+    margin: 40px 10px;
+
+    .frame--large {
+      padding: 60px 20px;
+    }
+
+    .frame--medium {
+      padding: 40px 20px;
+    }
+
+    .frame__contents {
+      flex-direction: column;
+    }
+  }
+}

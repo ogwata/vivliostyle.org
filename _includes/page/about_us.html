@@ -1,0 +1,63 @@
+<section class="section">
+  <h2>
+    {{ include.foundation_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.foundation_description | markdownify }}
+
+    <div class="foundation__text">
+      {{ include.foundation_text | markdownify }}
+
+      <ul class="foundation__members">
+        {% for person in include.foundation_members %}
+          {% if page.lang == "ja" %}
+            {% assign name = person[1].ja %}
+            {% assign role = person[1].role_ja %}
+            {% assign email = person[1].email %}
+          {% else %}
+            {% assign name = person[1].en %}
+            {% assign role = person[1].role_en %}
+            {% assign email = person[1].email %}
+          {% endif %}
+
+          <li class="author__item">
+            {% if email %}
+              <a href="mailto:{{ email }}" class="author__link">{{ name }}</a>
+            {% else %}
+              {{ name }}
+            {% endif %}
+
+            ({{ role }})
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.devteam_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.devteam_description | markdownify }}
+
+    {% include avatar-list.html namelist=site.data.developer.current_vivliostyle %}
+
+    <div class="button-list">
+      {% include button/slack.html text=slack_buttontext %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.sponsor_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.sponsor_description | markdownify }}
+  </div>
+</section>

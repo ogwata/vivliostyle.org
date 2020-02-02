@@ -1,0 +1,18 @@
+en:
+  - title: Getting Started
+    url: /getting_started
+  - title: Documents
+    url: /documents
+  - title: FAQ
+    url: /faq
+  - title: Blog
+    url: /blog
+ja:
+  - title: 使ってみる
+    url: /ja/getting_started/
+  - title: ドキュメント
+    url: /ja/documents/
+  - title: FAQ
+    url: /ja/faq/
+  - title: ブログ
+    url: /ja/blog/

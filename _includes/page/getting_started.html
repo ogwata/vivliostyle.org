@@ -1,0 +1,88 @@
+<section class="section">
+  <h2>
+    {{ include.pub_title }}
+    <span class="tip">{{ include.pub_tip }}</span>
+  </h2>
+
+  <div class="container">
+    {{ include.pub_description | markdownify }}
+
+    <div class="button-list">
+      <a href="{{ include.pub_buttonlink }}" class="button--large">{{ include.pub_buttontext }}</a>
+      {% include button/github.html link=include.pub_buttonlink_github text="README" %}
+    </div>
+
+    <div class="frame--large">
+      <h3>{{ include.pub_frame1_title }}</h3>
+
+      <div class="container">
+        {{ include.pub_frame1_description | markdownify }}
+        <ul class="gallery">
+          {% for item in include.pub_gallery %}
+            <li class="gallery__item">
+              <a href="{{ item.url }}">
+                <img src="{{ item.src }}" class="gallery__img">
+              </a>
+              <div class="gallery__name">{{ item.name }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.cli_title }}
+    <span class="tip">{{ include.cli_tip }}</span>
+  </h2>
+
+  <div class="container">
+    {{ include.cli_description | markdownify }}
+
+    <div class="button-list">
+      {% include button/github.html link=include.cli_buttonlink_github text="README" %}
+    </div>
+
+    <div class="frame--large">
+      <h3>{{ include.cli_frame1_title }}</h3>
+
+      <div class="container">
+        {{ include.cli_frame1_description | markdownify }}
+      </div>
+    </div>
+
+    <div class="frame--large">
+      <h3>{{ include.cli_frame2_title }}</h3>
+
+      <div class="container">
+        {{ include.cli_frame2_description | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.viewer_title }}
+    <span class="tip">{{ include.viewer_tip }}</span>
+  </h2>
+
+  <div class="container">
+    {{ include.viewer_description | markdownify }}
+
+    <div class="button-list">
+      <a href="{{ include.viewer_buttonlink }}" class="button--large">{{ include.viewer_buttontext }}</a>
+      {% include button/github.html link=include.viewer_buttonlink_github text="README" %}
+    </div>
+
+    <div class="frame--large">
+      <h3>{{ include.viewer_frame1_title }}</h3>
+
+      <div class="container">
+        {{ include.viewer_frame1_description | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>

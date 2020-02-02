@@ -1,0 +1,96 @@
+<section class="section">
+  <h2>
+    {{ include.guide_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.guide_description | markdownify }}
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.reference_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.reference_description | markdownify }}
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.plan_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.plan_description | markdownify }}
+
+    <ol class="plan-list">
+      <li>
+        {% include plan.html
+          title=include.plan_core_title
+          url=include.plan_core_url
+          description=include.plan_core_description
+          thumbnail=include.plan_core_thumbnail
+        %}
+      </li>
+
+      <li>
+        {% include plan.html
+          title=include.plan_pub_title
+          url=include.plan_pub_url
+          description=include.plan_pub_description
+          thumbnail=include.plan_pub_thumbnail
+        %}
+      </li>
+
+      <li>
+        {% include plan.html
+          title=include.plan_cli_title
+          url=include.plan_cli_url
+          description=include.plan_cli_description
+          thumbnail=include.plan_cli_thumbnail
+        %}
+      </li>
+
+      <li>
+        {% include plan.html
+          title=include.plan_viewer_title
+          url=include.plan_viewer_url
+          description=include.plan_viewer_description
+          thumbnail=include.plan_viewer_thumbnail
+        %}
+      </li>
+
+      <li>
+        {% include plan.html
+          title=include.plan_others_title
+          url=include.plan_others_url
+          description=include.plan_others_description
+          thumbnail=include.plan_others_thumbnail
+        %}
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.license_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.license_description | markdownify }}
+  </div>
+</section>
+
+<section class="section">
+  <h2>
+    {{ include.community_title }}
+  </h2>
+
+  <div class="container">
+    {{ include.community_description | markdownify }}
+  </div>
+</section>
