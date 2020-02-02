@@ -1,0 +1,263 @@
+.global-header {
+  .global-header__container {
+    height: 80px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .global-header__logo {
+    width: auto;
+    height: 50px;
+  }
+
+  .global-header__brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .global-header__search {
+    display: flex;
+    margin-left: 40px;
+    color: $gray_light;
+  }
+
+  .global-header__searchicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $gray_light;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: $white;
+    font-size: 26px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      right: -2px;
+      height: calc(50px - 2px);
+      background: $white;
+    }
+  }
+
+  .global-header__input {
+    width: 160px;
+    height: 50px;
+    margin: 0;
+    padding: 10px 20px 10px 0px;
+    background: $white;
+    appearance: none;
+    outline: none;
+    border: 1px solid $gray_light;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: $body_font_size;
+    transition: $hover_animation;
+  }
+
+  .global-header__nav {
+    display: flex;
+  }
+
+  .nav__button {
+    @extend .button--medium;
+
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+    height: fit-content;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .nav__list--main,
+  .nav__list--sub {
+    @extend .nav__list;
+  }
+
+  .nav__item {
+    background-color: $white;
+    transition: $hover_animation;
+
+    &:hover {
+      background-color: $blue_lighter;
+    }
+  }
+
+  .nav__item--active {
+    @extend .nav__item;
+
+    box-shadow: inset 0 -6px 0 $primary_color;
+  }
+
+  .item__icon::before {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+
+  .nav__link {
+    height: 80px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $text_color;
+    }
+  }
+
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px 80px;
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  .jumbotron__lead {
+    font-family: $vivliostyle_font, $body_font;
+    font-size: $display_font_size;
+    color: $white;
+  }
+
+  .jumbotron__lead--top {
+    @extend .jumbotron__lead;
+
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    letter-spacing: -2px;
+  }
+
+  @media screen and (max-width: $breakpoint_large) {
+    // 検索ボックスを簡略化する
+    .global-header__search {
+      margin-left: 10px;
+    }
+
+    .global-header__searchicon {
+      padding: 0;
+      border: 0;
+      color: $text_color;
+
+      &:after {
+        content: unset;
+      }
+    }
+
+    .global-header__input {
+      display: none;
+    }
+
+    // 左右余白を縮める
+    .nav__link {
+      padding: 0 10px;
+    }
+
+  }
+
+  @media screen and (max-width: $breakpoint_middle) {
+    // 言語とGitHubのラベルを消す
+    .nav__label {
+      display: none;
+    }
+
+    // MENUボタンを出す
+    .nav__button {
+      width: 100%;
+      display: block;
+      height: 80px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    // MENUの中身を隠す
+    .global-header__nav {
+      flex-direction: row-reverse;
+    }
+
+    .nav__list--main {
+      flex-direction: column;
+      visibility: hidden;
+      z-index: 10;
+      transition: $hover_animation;
+
+      &:before {
+        content: "MENU";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        visibility: initial;
+        cursor: pointer;
+      }
+    }
+
+    .item__icon::before {
+      margin-right: 0;
+    }
+
+    .nav__list--open {
+      visibility: initial;
+    }
+
+    .nav__list--close {
+      visibility: hidden;
+    }
+
+    .nav__button {
+      visibility: initial;
+    }
+
+    .nav__item--active {
+      box-shadow: inset 6px 0 0 $primary_color;
+    }
+
+    .jumbotron {
+      height: auto;
+    }
+
+    .jumbotron__lead--top {
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint_small) {
+    .global-header__container {
+      padding: 0 10px;
+    }
+
+    .global-header__logo {
+      height: 30px;
+    }
+
+    .jumbotron {
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    .jumbotron__lead {
+      font-size: 15px;
+    }
+
+    .jumbotron__lead--top {
+      margin: 40px 0;
+      font-size: 50px;
+    }
+  }
+}

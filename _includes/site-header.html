@@ -1,40 +1,96 @@
-<header class="header">
-	<div class="container">
-		{%- if site.logo %}
-		<a class="logo" href="{{ site.baseurl }}/">
-			<img src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title | append: ' logo' }}"/>
-		</a>
-		{%- endif %}
-		<nav class="nav  nav--header">
-			<ul class="list  list--nav">
-				{%- if page.lang == "ja" %}
-				<li class="item  item--nav"><a href="/">English</a></li>
-				{%- else -%}
-				<li class="item  item--nav"><a href="/ja/">日本語</a></li>
-				{% endif -%}
-				{% for item in site.navigation_header %}
-				{%- if page.lang == "ja" and item.url_ja -%}
-				{%- assign item_url = item.url_ja -%}
-				{%- else -%}
-				{%- assign item_url = item.url -%}
-				{%- endif -%}
-				{%- if item_url contains '://' -%}
-				{%- assign url = item_url -%}
-				{%- else -%}
-				{%- assign url = item_url | relative_url -%}
-				{%- endif %}
-				<li class="item  item--nav{% if item_url == page.url %}  item--current{% endif %}">
-					{%- if page.lang == "ja" -%}
-					<a href="{{ url }}">{{ item.ja }}</a>
-					{%- else -%}
-					<a href="{{ url }}">{{ item.en }}</a>
-					{%- endif -%}
-				</li>
-				{%- endfor %}
-			</ul>
-		</nav>
-	</div>
-{%- if page.feature_image %}
-	<div class="feature" style="background-image: url({{ page.feature_image }})"></div>
-{%- endif %}
+<header class="global-header">
+  <div class="global-header__container">
+
+    <div class="global-header__brand">
+      <a href="{{ site.baseurl }}/">
+        <h1>
+          <img class="global-header__logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title | append: ' logo' }}"/>
+        </h1>
+      </a>
+
+      <form class="global-header__search" action="">
+        <div class="global-header__searchicon">
+          <i class="mdi mdi-magnify"></i>
+        </div>
+        <input class="global-header__input" id="search-form" type="search" name="search" placeholder="Search" autocomplete="off" />
+      </form>
+    </div>
+
+    <nav class="global-header__nav">
+      <ol class="nav__list--main" id="navListMain">
+        {% if page.lang == "ja" %}
+          {% assign global_header = site.data.global_header.ja %}
+        {% else %}
+          {% assign global_header = site.data.global_header.en %}
+        {% endif %}
+
+        {% for item in global_header %}
+          {% if item.url contains '://' %}
+            {% assign url = item.url %}
+          {% else %}
+            {% assign url = item.url | relative_url %}
+          {% endif %}
+
+          <li class="nav__item{% if item.url == page.url %}--active{% endif %}">
+            <a class="nav__link" href="{{ url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+
+      <ol class="nav__list--sub">
+        <li class="nav__item">
+          {% if page.lang == "ja" %}
+            <a class="nav__link" href="/ja/">
+              <i class="mdi mdi-web item__icon"></i>
+              <span class="nav__label">日本語</span>
+            </a>
+          {% else %}
+            <a class="nav__link" href="/">
+              <i class="mdi mdi-web item__icon"></i>
+              <span class="nav__label">English</span>
+            </a>
+          {% endif %}
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__link" href="{{ site.social_links.GitHub }}">
+            <i class="mdi mdi-github-circle item__icon"></i>
+            <span class="nav__label">GitHub</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  {% if page.jumbotron_image %}
+    <div class="jumbotron" style="background-image: url({{ site.data.jumbotron.image }})">
+      <p class="jumbotron__lead--top">CSS Typesetting</p>
+
+      {% if page.lang == "ja" and site.data.jumbotron.lead.ja %}
+        {% assign lead = site.data.jumbotron.lead.ja %}
+      {% else %}
+        {% assign lead = site.data.jumbotron.lead.en %}
+      {% endif %}
+
+      <p class="jumbotron__lead">
+        {% for line in lead %}
+          {{ line }}<br/>
+        {% endfor %}
+      </p>
+    </div>
+  {% endif %}
 </header>
+
+<script>
+  const navListMain = document.getElementById("navListMain");
+
+  navListMain.addEventListener("mouseover", function(event) {
+    navListMain.classList.remove("nav__list--close")
+    navListMain.classList.add("nav__list--open")
+  });
+
+  navListMain.addEventListener("mouseout", function(event) {
+    navListMain.classList.remove("nav__list--open")
+    navListMain.classList.add("nav__list--close")
+  });
+</script>
