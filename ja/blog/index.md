@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ブログ
+title: ブログ一覧
 lang: ja
 ---
 

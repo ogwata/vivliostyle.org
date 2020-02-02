@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+{% if page.lang == "ja" %}
+  {% capture title %}「{{ page.title }}」タグのついたブログ一覧{% endcapture %}
+{% else %}
+  {% capture title %}Posts with '{{ page.title }}' tag{% endcapture %}
+{% endif %}
+
+{% include page/blog.html
+  title=title
+  posts=page.posts
+%}

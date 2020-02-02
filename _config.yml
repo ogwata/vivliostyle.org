@@ -26,6 +26,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-default-layout
+  - jekyll-archives
   - jemoji
 
 # 3. Gem settings
@@ -66,6 +67,12 @@ defaults:
     values:
       lang: "ja"
       permalink: /ja/blog/:year/:month/:day/:title/
+jekyll-archives:
+  enabled:
+    - tags
+  layout: blog_tag
+  permalinks:
+    tag: '/blog/tag/:name/'
 
 # 6. Site settings
 encoding: utf-8                           # Make sure the encoding is right
