@@ -48,7 +48,7 @@ lang: ja
   foundation_text=foundation_text
   foundation_members=site.data.foundation_members.ja
 
-  devteam_title="開発チーム"
+  devteam_title="コントリビューター一覧"
   devteam_description=devteam_description
   slack_buttontext="Slackに参加"
 

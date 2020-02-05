@@ -1,7 +1,9 @@
 <ul class="avatar-list">
   {% for name in include.namelist %}
     <li class="avatar-list__item">
-      <img src="https://github.com/{{ name }}.png" alt="{{ name }}" class="avatar">
+      <a href="https://github.com/{{ name }}">
+        <img src="https://github.com/{{ name }}.png" alt="{{ name }}" class="avatar">
+      </a>
     </li>
   {% endfor %}
 </ul>

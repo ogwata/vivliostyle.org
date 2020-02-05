@@ -34,7 +34,7 @@
   <div class="container">
     {{ include.devteam_description | markdownify }}
 
-    {% include avatar-list.html namelist=site.data.developer.current_vivliostyle %}
+    <ul class="avatar-list" id="contributors-list"></ul>
 
     <div class="button-list">
       {% include button/slack.html text=slack_buttontext %}
@@ -51,3 +51,5 @@
     {{ include.sponsor_description | markdownify }}
   </div>
 </section>
+
+{% include fetch-contributors.html id="contributors-list" %}
