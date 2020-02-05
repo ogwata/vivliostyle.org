@@ -6,29 +6,19 @@
   <div class="container">
     {{ include.foundation_description | markdownify }}
 
-    <div class="foundation__text">
+    <div class="frame--medium">
       {{ include.foundation_text | markdownify }}
 
       <ul class="foundation__members">
-        {% for person in include.foundation_members %}
-          {% if page.lang == "ja" %}
-            {% assign name = person[1].ja %}
-            {% assign role = person[1].role_ja %}
-            {% assign email = person[1].email %}
-          {% else %}
-            {% assign name = person[1].en %}
-            {% assign role = person[1].role_en %}
-            {% assign email = person[1].email %}
-          {% endif %}
-
-          <li class="author__item">
-            {% if email %}
-              <a href="mailto:{{ email }}" class="author__link">{{ name }}</a>
+        {% for member in include.foundation_members %}
+          <li class="members__item">
+            {% if member[1].email %}
+              <a href="mailto:{{ member[1].email }}" class="members__link">{{ member[1].name }}</a>
             {% else %}
-              {{ name }}
+              {{ member[1].name }}
             {% endif %}
 
-            ({{ role }})
+            ({{ member[1].role }})
           </li>
         {% endfor %}
       </ul>

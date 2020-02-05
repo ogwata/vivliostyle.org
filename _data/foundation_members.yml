@@ -3,6 +3,10 @@ ja:
     name: 村上 真雄
     email: murakami@vivliostyle.org
     role: 代表理事、Vivliostyle プロジェクト・リーダー
+  ogwata:
+    name: 小形 克宏
+    email:
+    role: 理事、業務執行役員
   florian:
     name: リボアル・フロリアン
     email: vivliostyle@florian.rivoal.net
@@ -11,15 +15,15 @@ ja:
     name: ヨハネス・ウィルム
     email: johannes@fiduswriter.org
     role: 理事、W3C Editing Taskforce Invited Expert
-  spring_raining:
-    name: spring-raining
-    email: harusamex.com@gmail.com
-    role: Vivliostyle プロジェクト コラボレーター
 en:
   murakami:
     name: Shinyu Murakami
     email: murakami@vivliostyle.org
     role: Representative Director, Vivliostyle Project Leader
+  ogwata:
+    name: Katsuhiro Ogata
+    email:
+    role:
   florian:
     name: Florian Rivoal
     email: vivliostyle@florian.rivoal.net
@@ -28,7 +32,3 @@ en:
     name: Johannes Wilm
     email: johannes@fiduswriter.org
     role: Director, W3C Editing Taskforce Invited Expert
-  spring_raining:
-    name: spring-raining
-    email: harusamex.com@gmail.com
-    role: Vivliostyle Project Collaborator

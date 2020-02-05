@@ -4,16 +4,12 @@
   </h2>
 
   <div class="container">
-    {{ include.adaptive_layout_description | markdownify }}
-    {% include avatar-list.html namelist=site.data.developer.adaptive_layout %}
+    {{ include.beginning_description | markdownify }}
 
-    {{ include.old_vivliostyle_dev_description | markdownify }}
+    {{ include.adaptive_layout_description | markdownify }}
     {% include avatar-list.html namelist=site.data.developer.old_vivliostyle_dev %}
 
-    {{ include.old_vivliostyle_pullreq_description | markdownify }}
-    {% include avatar-list.html namelist=site.data.developer.old_vivliostyle_pullreq %}
-
     {{ include.current_vivliostyle_description | markdownify }}
-    {% include avatar-list.html namelist=site.data.developer.current_vivliostyle %}
+    {% include avatar-list.html namelist=site.data.developer.current_vivliostyle_dev %}
   </div>
 </section>

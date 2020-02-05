@@ -21,7 +21,9 @@
   }
 
   .container {
-    > p {
+    > p,
+    > ul,
+    > ol {
       margin: 20px 0;
     }
 

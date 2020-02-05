@@ -18,6 +18,10 @@ img {
   width: 100%;
 }
 
+small {
+  font-size: $small_font_size;
+}
+
 a {
   &:link {
     font-weight: 700;

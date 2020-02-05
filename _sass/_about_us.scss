@@ -1,19 +1,12 @@
-.foundation__text {
-  text-align: right;
-}
-
-.foundation__members {
-  @extend .nostyle;
-}
-
 .avatar-list {
   @extend .nostyle;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .avatar-list__item {
-  margin: 0 20px;
+  margin: 10px;
 }
 
 .avatar {

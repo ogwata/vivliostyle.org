@@ -1,15 +1,13 @@
-adaptive_layout:
-  - sorotokin
 old_vivliostyle_dev:
+  - sorotokin
   - kwkbtr
   - unageanu
   - skoji
   - satorumurmur
   - frivoal
-old_vivliostyle_pullreq:
   - nulltask
   - cosmo0920
-current_vivliostyle:
+current_vivliostyle_dev:
   - MurakamiShinyu
   - kubosho
   - uetchy

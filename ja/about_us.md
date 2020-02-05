@@ -16,11 +16,15 @@ lang: ja
 
 
 {% capture foundation_text %}
-一般社団法人ビブリオスタイル
+### 一般社団法人ビブリオスタイル (Vivliostyle Foundation)
 
-Vivliostyle Foundation
+- 代表者：村上真雄
+- 設立：2018 年 8 月
+- 所在地：〒336-0015 埼玉県さいたま市南区太田窪1941-84
+- 電話：090-3688-2212
+- mail：[info@vivliostyle.org](mailto:info@vivliostyle.org)
 
-2018年8月 設立
+### メンバー
 {% endcapture %}
 
 
@@ -30,7 +34,11 @@ Vivliostyle Foundation
 
 
 {% capture sponsor_description %}
-〜〜
+### このサイトに広告を出稿する
+
+### クレジットカード決済で寄付する（congrantへ）
+
+### GitHubスポンサーに応募する
 {% endcapture %}
 
 
@@ -38,12 +46,12 @@ Vivliostyle Foundation
   foundation_title="Vivliostyle Foundation について"
   foundation_description=foundation_description
   foundation_text=foundation_text
-  foundation_members=site.data.people
+  foundation_members=site.data.foundation_members.ja
 
   devteam_title="開発チーム"
   devteam_description=devteam_description
   slack_buttontext="Slackに参加"
 
-  sponsor_title="スポンサー募集"
+  sponsor_title="Vivliostyleのスポンサーになりませんか"
   sponsor_description=sponsor_description
 %}
