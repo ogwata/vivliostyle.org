@@ -42,10 +42,10 @@
     </div>
 
     <div class="button-list">
-      <a href="{{ include.pub_link }}" class="button--large">{{ include.pub_buttontext }}</a>
-      {% include button/github.html link=include.pub_samplelink text=include.pub_buttonsampletext %}
+      <!-- <a href="{{ include.pub_link }}" class="button--large">{{ include.pub_buttontext }}</a> -->
+      <a href="{{ include.pub_samplelink }}" class="button--large">{{ include.pub_buttonsampletext }}</a>
       <span class="button">{{ include.or_text }}</span>
-      <a href="{{ include.cli_link }}" class="button--large">{{ include.cli_buttontext }}</a>
+      {% include button/github.html link=include.cli_link text=include.cli_buttontext %}
     </div>
   </div>
 </section>
