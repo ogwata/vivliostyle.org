@@ -3,23 +3,20 @@
 
   .section {
     flex: 2;
-    margin-right: 30px;
-    margin-top: calc(140px - 64px);
-  }
-
-  .toc__container {
-    flex: 1;
+    margin: calc(140px - 64px);
   }
 
   .toc__nav {
+    flex: 1;
+  }
+
+  .toc-list {
+    @extend .nostyle;
+
     position: sticky;
     margin-right: 180px;
     padding-top: 60px;
     top: 100px;
-  }
-
-  .toc-list {
-    list-style: none;
   }
 
   .toc-list__item {
@@ -81,11 +78,19 @@
 }
 
 @media screen and (max-width: $breakpoint_large) {
+  // 縦並びにする
   .with-toc {
     flex-direction: column-reverse;
 
+    // 通常の1カラム表示に合わせる
+    .section {
+      margin: auto;
+    }
+
+    // 通常の1カラム表示に合わせる
     .toc__nav {
-      margin: 0 70px;
+      width: $section_width_large;
+      margin: auto;
     }
   }
 }

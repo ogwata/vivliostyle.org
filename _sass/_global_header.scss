@@ -1,6 +1,11 @@
 .global-header {
+
+  // ----------
+  // global-header
+  // ----------
+
   .global-header__container {
-    height: 80px;
+    height: $header_height;
     padding: 0 30px;
     display: flex;
     justify-content: space-between;
@@ -15,6 +20,10 @@
     display: flex;
     align-items: center;
   }
+
+  // ----------
+  // search
+  // ----------
 
   .global-header__search {
     display: flex;
@@ -61,14 +70,12 @@
     transition: $hover_animation;
   }
 
+  // ----------
+  // nav
+  // ----------
+
   .global-header__nav {
     display: flex;
-  }
-
-  .nav__button {
-    @extend .button--medium;
-
-    display: none;
   }
 
   .nav__list {
@@ -98,13 +105,13 @@
     box-shadow: inset 0 -6px 0 $primary_color;
   }
 
-  .item__icon::before {
+  .item__icon {
     font-size: 22px;
     margin-right: 5px;
   }
 
   .nav__link {
-    height: 80px;
+    height: $header_height;
     padding: 0 24px;
     display: flex;
     align-items: center;
@@ -115,6 +122,10 @@
       color: $text_color;
     }
   }
+
+  // ----------
+  // jumbotron
+  // ----------
 
   .jumbotron {
     display: flex;
@@ -139,7 +150,9 @@
     font-size: 80px;
     font-weight: 500;
     margin-bottom: 50px;
+    line-height: 1;
     letter-spacing: -2px;
+    text-shadow: 1px 1px 3px $gray;
   }
 
   @media screen and (max-width: $breakpoint_large) {
@@ -162,82 +175,125 @@
       display: none;
     }
 
+    .nav__list {
+      padding-left: 10px;
+    }
+
     // 左右余白を縮める
     .nav__link {
       padding: 0 10px;
     }
-
   }
+}
 
-  @media screen and (max-width: $breakpoint_middle) {
+@media screen and (max-width: $breakpoint_medium) {
+  .global-header {
+
+    // ロゴを小さくする
+    .global-header__logo {
+      height: 40px;
+    }
+
+    // アイコンを大きくする
+    .item__icon {
+      font-size: 30px;
+      margin-right: 0;
+    }
+
     // 言語とGitHubのラベルを消す
     .nav__label {
       display: none;
     }
 
-    // MENUボタンを出す
-    .nav__button {
-      width: 100%;
-      display: block;
-      height: 80px;
-      padding: 0;
-      border: 0;
-      background: transparent;
+    // クリック領域を大きくする
+    .nav__link {
+      padding: 0 24px;
     }
 
-    // MENUの中身を隠す
+    // MENUを右端に持ってくる
     .global-header__nav {
       flex-direction: row-reverse;
     }
 
+    // MENUの中身を隠す
     .nav__list--main {
+      padding: 0;
+      font-size: 20px;
       flex-direction: column;
       visibility: hidden;
       z-index: 10;
-      transition: $hover_animation;
 
       &:before {
         content: "MENU";
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 80px;
-        visibility: initial;
+        height: $header_height;
+        visibility: visible;
         cursor: pointer;
+      }
+
+      // 枠をつける
+      .nav__item {
+        border-left: 1px solid $gray_lighter;
+        border-right: 1px solid $gray_lighter;
+
+        &:first-child {
+          border-top: 1px solid $gray_lighter;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid $gray_lighter;
+        }
       }
     }
 
-    .item__icon::before {
-      margin-right: 0;
-    }
-
+    // MENUの中身を見せる
     .nav__list--open {
-      visibility: initial;
+      visibility: visible;
+
+      .nav__item {
+        opacity: 1;
+      }
     }
 
+    // MENUの中身を隠す
     .nav__list--close {
       visibility: hidden;
+
+      .nav__item {
+        opacity: 0;
+      }
     }
 
-    .nav__button {
-      visibility: initial;
-    }
-
+    // 左側につける
     .nav__item--active {
       box-shadow: inset 6px 0 0 $primary_color;
     }
 
+    // 高さを可変にする
     .jumbotron {
       height: auto;
+      padding: 80px;
     }
 
-    .jumbotron__lead--top {
-      line-height: 1;
-      margin-bottom: 20px;
+    // 改行をなくす
+    .jumbotron__lead {
+      br {
+        display: none;
+      }
     }
   }
+}
 
-  @media screen and (max-width: $breakpoint_small) {
+@media screen and (max-width: $breakpoint_small) {
+  .global-header {
+
+    // ボタンを小さくする
+    .nav__link {
+      padding: 0 10px;
+    }
+
     .global-header__container {
       padding: 0 10px;
     }
@@ -247,7 +303,7 @@
     }
 
     .jumbotron {
-      padding: 20px 10px;
+      padding: 40px 10px;
       text-align: center;
     }
 
@@ -256,7 +312,7 @@
     }
 
     .jumbotron__lead--top {
-      margin: 40px 0;
+      margin-bottom: 40px;
       font-size: 50px;
     }
   }

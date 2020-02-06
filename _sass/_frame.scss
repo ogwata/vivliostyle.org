@@ -1,0 +1,46 @@
+.frame {
+  border: 2px solid $gray_lighter;
+  border-radius: $border-radius;
+
+  > .heading {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.frame--large {
+  @extend .frame;
+
+  padding: 60px 80px;
+}
+
+.frame--medium {
+  @extend .frame;
+
+  padding: 40px 60px;
+
+  .heading__link {
+    @extend .nostyle;
+  }
+}
+
+.frame__contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.frame__title {
+  margin-top: 0;
+}
+
+.frame__link {
+  @extend .nostyle
+}
+
+.frame__thumbnail {
+  @extend .thumbnail;
+
+  width: 210px;
+  margin-left: 20px;
+}

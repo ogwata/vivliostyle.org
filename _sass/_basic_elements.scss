@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: $text_color;
+  font-family: $body_font;
+  font-size: $body_font_size;
+  font-weight: 400;
+  line-height: $body_line_height;
+}
+
+// ----------
+// img
+// ----------
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img.nostyle {
+  display: unset;
+  margin: unset;
+  width: unset;
+  max-width: unset;
+}
+
+// ----------
+// small
+// ----------
+
+small {
+  font-size: $small_font_size;
+}
+
+// ----------
+// a
+// ----------
+
+a {
+  transition: $hover_animation;
+
+  &:link {
+    font-weight: 700;
+    color: $link_color;
+  }
+
+  &:visited {
+    color: $link_visited_color;
+  }
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+}
+
+a.nostyle {
+  text-decoration: none;
+
+  &:link {
+    font-weight: unset;
+    color: unset;
+  }
+
+  &:visited {
+    color: unset;
+  }
+}
+
+// ----------
+// ol, ul
+// ----------
+
+ol,
+ul {
+  padding-left: 40px;
+}
+
+ol.nostyle,
+ul.nostyle {
+  padding-left: unset;
+  list-style: none;
+}
+
+// ----------
+// blockquote
+// ----------
+
+blockquote {
+  color: $gray;
+  border-left: 5px solid $gray_light;
+  margin-left: 5px;
+  padding-left: 15px;
+}
+
+// ----------
+// pre
+// ----------
+
+pre {
+  padding: 20px 40px;
+  font-family: $monospace_font;
+  font-size: $monospace_font_size;
+  background: $black;
+  color: $white;
+  white-space: pre-wrap;
+}
+
+// ----------
+// others
+// ----------
+
+.tip {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 6px 16px;
+  background-color: $black;
+  color: $white;
+  font-size: $small_font_size;
+  border-radius: 20px;
+  font-family: $monospace_font;
+}

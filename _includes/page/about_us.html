@@ -1,41 +1,41 @@
 <section class="section">
-  <h2>
-    {{ include.foundation_title }}
-  </h2>
-
   <div class="container">
+    <h2>{{ include.foundation_title }}</h2>
+
     {{ include.foundation_description | markdownify }}
 
-    <div class="frame--medium">
-      {{ include.foundation_text | markdownify }}
+    <ol class="frame-list">
+      <li class="frame--medium">
+        {{ include.foundation_text | markdownify }}
 
-      <ul class="foundation__members">
-        {% for member in include.foundation_members %}
-          <li class="members__item">
-            {% if member[1].email %}
-              <a href="mailto:{{ member[1].email }}" class="members__link">{{ member[1].name }}</a>
-            {% else %}
-              {{ member[1].name }}
-            {% endif %}
+        <ul class="foundation__members">
+          {% for member in include.foundation_members %}
+            <li class="members__item">
+              {% if member[1].email %}
+                <a href="mailto:{{ member[1].email }}" class="members__link">{{ member[1].name }}</a>
+              {% else %}
+                {{ member[1].name }}
+              {% endif %}
 
-            ({{ member[1].role }})
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+              ({{ member[1].role }})
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ol>
   </div>
 </section>
 
 <section class="section">
-  <h2>
-    {{ include.devteam_title }}
-  </h2>
+  <div class="container">
+    <h2>{{ include.devteam_title }}</h2>
+
+    {{ include.devteam_description | markdownify }}
+  </div>
+
+  <ul class="avatar-list" id="contributors-list"></ul>
 
   <div class="container">
-    {{ include.devteam_description | markdownify }}
-
-    <ul class="avatar-list" id="contributors-list"></ul>
-
     <div class="button-list">
       {% include button/slack.html text=slack_buttontext %}
     </div>
@@ -43,11 +43,9 @@
 </section>
 
 <section class="section">
-  <h2>
-    {{ include.sponsor_title }}
-  </h2>
-
   <div class="container">
+    <h2>{{ include.sponsor_title }}</h2>
+
     {{ include.sponsor_description | markdownify }}
   </div>
 </section>

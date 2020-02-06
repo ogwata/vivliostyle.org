@@ -1,6 +1,6 @@
-<ol class="post-list">
+<ol class="frame-list">
   {% for post in include.posts %}
-    <li class="post-list__item">
+    <li class="post-item">
 
     {% include post-header.html
       date=post.date
@@ -10,7 +10,7 @@
       <a href="{{ site.baseurl }}{{ post.url }}" class="frame__link">
         <div class="frame__contents">
           <div class="post__text">
-            <h3 class="post__title">{{ post.title }}</h3>
+            <h3 class="frame__title">{{ post.title }}</h3>
             <p class="post__excerpt">
               {{ post.excerpt | strip_html | truncate: 200 }}
             </p>

@@ -7,19 +7,19 @@ layout: default
 <main class="main">
   <article class="post">
     <section class="section">
+      {% include post-header.html
+        date=page.date
+        tags=page.tags
+      %}
+
+      <h2 class="post__title">{{ page.title }}</h2>
+
+      {% include post-author.html
+        author=page.author
+        members=site.data.people.ja
+      %}
+
       <div class="container">
-        {% include post-header.html
-          date=page.date
-          tags=page.tags
-        %}
-
-        <h2 class="post__title">{{ page.title }}</h2>
-
-        {% include post-author.html
-          author=page.author
-          members=site.data.members.ja
-        %}
-
         {{ content }}
       </div>
     </section>

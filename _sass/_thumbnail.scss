@@ -1,0 +1,10 @@
+.thumbnail {
+  width: 320px;
+  border-radius: $border_radius;
+}
+
+@media screen and (max-width: $breakpoint_medium) {
+  .thumbnail {
+    width: 100%;
+  }
+}

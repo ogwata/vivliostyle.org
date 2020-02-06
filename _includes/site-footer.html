@@ -28,11 +28,11 @@
     </nav>
 
     <div class="global-footer__info">
-      <ul class="global-footer__snslist">
-        <li class="snslist__item">
+      <ul class="button-list--column">
+        <li>
           {% include button/twitter.html text="Vivliostyle" link=site.social_links.Twitter %}
         </li>
-        <li class="snslist__item">
+        <li>
           {% include button/facebook.html text="Vivliostyle" link=site.social_links.Facebook %}
         </li>
       </ul>
@@ -41,10 +41,10 @@
         <a href="{{ site.baseurl }}/">
           {% include logo.html class="global-footer__logo" %}
         </a>
-      </div>
 
-      <div class="global-footer__copyright">
-        <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
+        <p>
+          <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
+        </p>
       </div>
     </div>
   </div>

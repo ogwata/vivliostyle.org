@@ -1,130 +1,37 @@
 .section {
-  margin: 64px 180px;
+  margin: $section_top_bottom auto;
+  width: $section_width;
 
   &:first-child {
-    margin-top: 140px;
+    margin-top: $section_first_top_bottom;
   }
 
   &:last-child {
-    margin-bottom: 140px;
+    margin-bottom: $section_first_top_bottom;
+  }
+}
+
+// Markdownで書かれたコンテンツを表示する領域
+.container {
+  > p,
+  > ul,
+  > ol,
+  > blockquote,
+  > pre {
+    margin: 20px 0;
   }
 
-  .tip {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 4px 16px;
-    background-color: $black;
-    color: $white;
-    font-size: 14px;
-    border-radius: 20px;
-    font-family: $monospace_font;
+  img {
+    margin: 30px auto;
+    max-width: 50vw;
   }
 
-  .container {
-    > p,
-    > ul,
-    > ol {
-      margin: 20px 0;
-    }
-
-    .button-list {
-      margin: 30px 0;
-    }
+  .list {
+    margin: 30px 0;
 
     img {
-      margin: 30px auto;
-      max-width: 800px;
+      margin: 0;
     }
-
-    img.nostyle {
-      margin: unset;
-      max-width: unset;
-    }
-
-    ol,
-    ul {
-      padding-left: 40px;
-    }
-
-    ol.nostyle,
-    ul.nostyle {
-      padding-left: unset;
-      list-style: none;
-    }
-
-    blockquote {
-      color: $gray;
-      border-left: 5px solid $gray_light;
-      margin-left: 5px;
-      padding-left: 15px;
-    }
-
-    pre {
-      font-family: $monospace_font;
-      font-size: $monospace_font_size;
-      padding: 20px 40px;
-      background: $black;
-      color: $white;
-      white-space: pre-wrap;
-    }
-  }
-
-  .frame {
-    border: 2px solid $gray_lighter;
-    border-radius: $border-radius;
-    margin: 20px 0;
-
-    > .heading {
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
-  }
-
-  .frame--large {
-    @extend .frame;
-
-    padding: 60px 80px;
-  }
-
-  .frame--medium {
-    @extend .frame;
-
-    padding: 40px 60px;
-
-    .heading__link {
-      @extend .nostyle;
-    }
-  }
-
-  .frame__contents {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .frame__link {
-    @extend .nostyle
-  }
-
-  .gallery {
-    @extend .nostyle;
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px 0 -30px;
-  }
-
-  .gallery__item {
-    width: 350px;
-    margin: 0 30px 30px 0;
-  }
-
-  .gallery__img {
-    @extend .nostyle;
-  }
-
-  .gallery__name {
-    margin-top: 10px;
   }
 }
 
@@ -136,19 +43,44 @@
   .heading__link {
     @extend .nostyle;
   }
+
+  .list {
+    justify-content: center;
+  }
+
+  .frame {
+    text-align: left;
+  }
+}
+
+.section--center--gray {
+  @extend .section--center;
+
+  margin: 0;
+  padding: $section_top_bottom calc((100vw - #{$section_width}) / 2);
+  background-color: $gray_lighter;
 }
 
 @media screen and (max-width: $breakpoint_large) {
   // 余白を縮める
   .section {
-    margin: 40px 70px;
+    margin: $section_top_bottom_large auto;
+    width: $section_width_large;
 
     &:first-child {
-      margin-top: 40px;
+      margin-top: $section_first_top_bottom_large;
     }
 
     &:last-child {
-      margin-bottom: 40px;
+      margin-bottom: $section_first_top_bottom_large;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint_medium) {
+  .container {
+    img {
+      max-width: unset;
     }
   }
 }

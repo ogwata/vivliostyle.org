@@ -29,7 +29,6 @@ lang: ja
 
 
 {% capture devteam_description %}
-〜〜
 {% endcapture %}
 
 

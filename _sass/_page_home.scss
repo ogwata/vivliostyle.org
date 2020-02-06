@@ -1,61 +1,80 @@
 .the-vivliostyle-project {
+
+  // ----------
+  // section
+  // ----------
+
   .section {
+    width: 100vw;
     margin: 0;
-    padding: 64px 180px;
+    padding: 100px calc((100vw - #{$section_width}) / 2);
     font-size: $display_font_size;
     color: $gray_dark;
 
-    .thumbnail-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 40px 0;
-    }
-
-    .thumbnail-list__item {
-      width: 320px;
-      margin: 0 50px;
-
-      img {
-        @extend .nostyle;
-      }
-    }
-
-    .button-list {
-      justify-content: center;
-    }
-
-    .project__list {
-      list-style: none;
-      padding: 0;
-
-      .project__innerlist {
-        display: flex;
-        list-style: none;
-        padding: 0;
-      }
-
-      .project__link {
-        font-size: $h4_font_size;
-        text-decoration: none;
-
-        &:link,
-        &:visited {
-          color: $text_color;
-        }
-      }
-
-      .project__description {
-        font-size: $body_font_size;
+    .heading {
+      &:first-child {
+        margin-top: 0;
       }
     }
   }
 
-  .section--gray {
-    @extend .section--center;
+  // ----------
+  // project__list
+  // ----------
 
-    background-color: $gray_lighter;
+  .project__list {
+    @extend .nostyle;
   }
+
+  .project__innerlist {
+    @extend .nostyle;
+
+    display: flex;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  .project__link {
+    font-size: $h4_font_size;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $text_color;
+    }
+  }
+
+  .project__description {
+    font-size: $small_font_size;
+  }
+
+  // ----------
+  // thumbnail-list
+  // ----------
+
+  .thumbnail-list {
+    > * {
+      margin: 0 50px 0 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  // ----------
+  // frame
+  // ----------
+
+  .frame {
+    font-size: $body_font_size;
+  }
+
+  // ----------
+  // animation
+  // ----------
 
   #animation--flow {
     @extend .nostyle;
@@ -186,66 +205,64 @@
       step3__changecolor 0.5s ease-in-out 3.7s forwards;
     }
   }
+}
 
-  @media screen and (max-width: $breakpoint_large) {
+@media screen and (max-width: $breakpoint_large) {
+  .the-vivliostyle-project {
     // 余白を縮める
     .section {
-      padding: 64px 70px;
+      padding: $section_top_bottom_large calc((100vw - #{$section_width_large}) / 2);
     }
   }
+}
 
-  @media screen and (max-width: $breakpoint_small) {
+@media screen and (max-width: $breakpoint_small) {
+  .the-vivliostyle-project {
+    // 隙間を小さく
+    .thumbnail-list {
+      > * {
+        margin: 0 0 20px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     // 余白を縮める
     .section {
-      padding: 20px 10px;
-      font-size: 20px;
+      font-size: $body_font_size;
 
       h2 {
         font-size: 30px;
       }
+    }
 
-      .button-list {
-        flex-direction: column;
+    .project__img {
+      margin: 10px 0;
+    }
 
-        .button {
-          margin: 10px 0;
-        }
-      }
+    .project__link {
+      font-size: 20px;
+    }
 
-      .thumbnail-list__item {
-        margin: 0 10px;
-      }
-
-      .project__list {
-        margin-left: -40px;
-
-        .project__img {
-          margin: 10px 0;
-        }
-
-        .project__text {
-          line-height: 1;
-        }
-
-        .project__link {
-          font-size: 20px;
-        }
-
-        .project__description {
-          display: none;
-        }
-      }
+    .project__description {
+      display: none;
     }
 
     #animation--flow {
       .animation__img {
-        margin-bottom: 30px;
+        margin: 0 0 20px 0;
       }
 
       .animation__label {
         margin: 0 5px;
         padding: 5px 10px;
         font-size: 15px;
+      }
+
+      .animation__bar {
+        height: 4px;
       }
     }
   }

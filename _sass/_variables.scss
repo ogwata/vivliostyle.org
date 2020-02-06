@@ -52,6 +52,7 @@ $github_color:   $black;
 $body_font:        "Roboto", "Noto Sans JP";
 $monospace_font:   "Roboto Mono";
 $vivliostyle_font: "Optima", "Marcellus";
+$icon_font:        "Material Design Icons";
 
 $h2_font_size: 44px;
 $h3_font_size: 34px;
@@ -72,15 +73,29 @@ $button_line_height: 1.4;
 // Animation
 // ----------
 
+$hover_opacity: 0.8;
 $hover_animation: all 0.2s;
+
+
+// ----------
+// Section
+// ----------
+
+$section_width: 70vw;
+$section_top_bottom: 64px;
+$section_first_top_bottom: 140px;
+
+$section_width_large: 90vw;
+$section_top_bottom_large: 64px;
+$section_first_top_bottom_large: 64px;
 
 
 // ----------
 // Breakpoint
 // ----------
 
-$breakpoint_large:  1300px;
-$breakpoint_middle: 960px;
+$breakpoint_large:  1200px;
+$breakpoint_medium: 960px;
 $breakpoint_small:  560px;
 
 
@@ -89,3 +104,4 @@ $breakpoint_small:  560px;
 // ----------
 
 $border_radius: 2px;
+$header_height: 80px;

@@ -2,31 +2,31 @@
   position: relative;
   line-height: $heading_line_height;
   color: $text_color;
+}
 
-  .heading__link {
-    position: absolute;
-    transform: rotate(45deg);
-    font-family: "Material Design Icons";
-    text-decoration: none;
-    transition: $hover_animation;
+// 見出しリンク（JSで自動付与）
+.heading__link {
+  position: absolute;
+  transform: rotate(45deg);
+  font-family: $icon_font;
+  text-decoration: none;
 
-    &:link,
-    &:visited {
-      color: $gray_lighter;
-    }
-
-    &:hover {
-      color: $gray_light;
-    }
-
-    &:before {
-      content: "\F339";
-    }
+  &:link,
+  &:visited {
+    color: $gray_lighter;
   }
 
-  .heading__link.nostyle {
-    display: none;
+  &:hover {
+    color: $gray_light;
   }
+
+  &:before {
+    content: "\F339";
+  }
+}
+
+.heading__link.nostyle {
+  display: none;
 }
 
 h2 {
@@ -86,29 +86,40 @@ h6 {
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@media screen and (max-width: $breakpoint_large) {
+  // サイズを小さくする
+  .heading .heading__link {
+    left: -40px;
+    font-size: 30px;
+  }
+
   h2 .heading__link {
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint_small) {
+  .heading .heading__link {
     left: 0;
+  }
+
+  h2 .heading__link {
     top: -60px;
   }
 
   h3 .heading__link {
-    left: 0;
     top: -50px;
   }
 
   h4 .heading__link {
-    left: 0;
     top: -44px;
   }
 
   h5 .heading__link {
-    left: 0;
     top: -38px;
   }
 
   h6 .heading__link {
-    left: 0;
     top: -34px;
   }
 }
