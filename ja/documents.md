@@ -7,14 +7,14 @@ under_construction: true
 
 
 {% capture guide_description %}
-[docs.vivliostyle.org](docs.vivliostyle.org)
+[docs.vivliostyle.org](https://docs.vivliostyle.org/)
 
 〜〜
 {% endcapture %}
 
 
 {% capture reference_description %}
-[docs.vivliostyle.org](docs.vivliostyle.org)
+[docs.vivliostyle.org](https://docs.vivliostyle.org/#/user-guide)
 
 〜〜
 {% endcapture %}
