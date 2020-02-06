@@ -1,5 +1,6 @@
 ---
 title: Vivliostyle Community
+under_construction: true
 ---
 
 - [Slack&mdash;Join now!](https://join.slack.com/t/vivliostyle/shared_invite/enQtNzc1NjE4ODk1ODI5LWQxZjM4YTZjMmQ0ZTUyNmUyOGZlMzIwZjQ5OWYwYjkyZDZmOTIwNGMwOWU5NDc0NjE5OTAyMmVhZTRhYTAyNWQ)
