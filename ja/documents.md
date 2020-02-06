@@ -2,6 +2,7 @@
 layout: page
 title: ドキュメント
 lang: ja
+under_construction: true
 ---
 
 

@@ -7,28 +7,10 @@
   <div class="container">
     {{ include.pub_description | markdownify }}
 
-    <div class="button-list">
-      <a href="{{ include.pub_buttonlink }}" class="button--large">{{ include.pub_buttontext }}</a>
-      {% include button/github.html link=include.pub_buttonlink_github text="README" %}
-    </div>
-
-    <div class="frame--large">
-      <h3>{{ include.pub_frame1_title }}</h3>
-
-      <div class="container">
-        {{ include.pub_frame1_description | markdownify }}
-        <ul class="gallery">
-          {% for item in include.pub_gallery %}
-            <li class="gallery__item">
-              <a href="{{ item.url }}">
-                <img src="{{ item.src }}" class="gallery__img">
-              </a>
-              <div class="gallery__name">{{ item.name }}</div>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+    <!-- <div class="button-list"> -->
+      <!-- <a href="{{ include.pub_buttonlink }}" class="button--large">{{ include.pub_buttontext }}</a> -->
+      <!-- {% include button/github.html link=include.pub_buttonlink_github text="README" %} -->
+    <!-- </div> -->
   </div>
 </section>
 
@@ -82,6 +64,16 @@
 
       <div class="container">
         {{ include.viewer_frame1_description | markdownify }}
+        <ul class="gallery">
+          {% for item in include.viewer_gallery %}
+          <li class="gallery__item">
+            <a href="{{ item.url }}">
+              <img src="{{ item.src }}" class="gallery__img">
+            </a>
+            <div class="gallery__name">{{ item.name }}</div>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

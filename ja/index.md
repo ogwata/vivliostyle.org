@@ -6,26 +6,24 @@ excerpt: "open source, web browser based CSS typesetting engine project"
 ---
 
 {% capture section1_description %}
-Vivliostyle Pub <small>(β版6月予定)</small> を使えば、EPUBや印刷可能なPDFをブラウザ上で作成できます。
+Vivliostyle Pub <small>(初期版を今年中に公開予定)</small> を使えば、EPUBや印刷可能なPDFをブラウザ上で作成できます。
 
-Vivliostyle CLI <small>(春頃公開)</small> でも、HTMLとCSSがあればEPUBやPDFを作成できます。
+Vivliostyle CLI <small>(2月中公開予定)</small> でも、HTMLとCSSがあればEPUBやPDFを作成できます。
 {% endcapture %}
 
 
 {% capture section2_description %}
-Vivliostyle Viewer を使えば、EPUBやWeb上の文書を〜〜
+Vivliostyle Viewer を使えば、EPUBやHTMLファイルを自分好みの組版で読むことができます。
 {% endcapture %}
 
 
 {% capture section3_description %}
-coreがあって役割ごとにn個の小プロジェクトがありますよみたいな説明
+Vivliostyle Core から、さまざまなプロジェクトが派生しています。
 {% endcapture %}
 
 
 {% capture section5_description %}
-Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合〜〜
-
-開発ガイド、ドキュメントは [開発のてびき]() を〜〜
+Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合っています。ぜひ見てみてください。開発ガイド、ドキュメントは下記ボタンからご覧ください。
 {% endcapture %}
 
 
@@ -66,10 +64,10 @@ Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合�
   project2_src="/assets/project2.png"
   project3_src="/assets/project3.png"
   project4_src="/assets/project4.png"
-  project_core_description="〜〜"
-  project_pub_description="〜〜"
-  project_cli_description="〜〜"
-  project_viewer_description="〜〜"
+  project_core_description="各種 CSS 組版仕様を実装した TypeScript ライブラリ"
+  project_pub_description="マークダウンを入力すると組版結果をすぐ見られる。"
+  project_cli_description="コマンドラインから組版して PDF を生成。"
+  project_viewer_description="HTML を読み込んで組版結果をブラウザに表示。"
 
   pub_buttontext="ブラウザで作る"
   pub_buttonsampletext="作成例を見る"

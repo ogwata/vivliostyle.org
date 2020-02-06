@@ -5,30 +5,17 @@ lang: ja
 ---
 
 {% capture pub_description %}
-Vivliostyle Pub は、ブラウザ上で完結する〜〜
-
-ブラウザ上ではなく、手元のPCで作りたい場合は [Vivliostyle CLI](#Vivliostyle CLI) をご利用ください。
-{% endcapture %}
-
-
-{% capture pub_frame1_description %}
-HTMLとCSSを用意する→Vivliostyle Pub上でビルド→いい感じにPDFができる
-
-Vivliostyle Pub上で動くサンプルを用意したので見てね
+左ペインでテキスト / Markdown / HTML を入力・編集すると、右ペインで組版結果がプレビューできます。
 {% endcapture %}
 
 
 {% capture cli_description %}
-Vivliostyle Pub は、コマンド〜〜
-
-コマンドラインではなく、ブラウザ上で作りたい場合は [Vivliostyle Pub](#Vivliostyle Pub) をご利用ください。
+コマンドラインで CSS 組版して、印刷入稿可能なPDFx/1a で保存します。
 {% endcapture %}
 
 
 {% capture cli_frame1_description %}
-Vivliostyle CLI は、npm パッケージとして公開して〜〜
-
-Node〜〜
+Vivliostyle CLI は、npm パッケージとして公開する予定です。また、Node.js のインストールが前提になります。
 
 ```shell
 $ npm install -g @vivliostyle/cli
@@ -37,12 +24,9 @@ $ npm install -g @vivliostyle/cli
 
 
 {% capture cli_frame2_description %}
-〜〜
-
-preview機能では〜〜
+ターミナルのコマンドラインから、HTML ファイルを指定して実行すると、CSS 組版したPDFファイルを出力します。preview オプションも用意されています。
 
 ```shell
-$ vivliostyle init --template thesis
 $ vivliostyle preview
 $ vivliostyle build
 ```
@@ -50,29 +34,24 @@ $ vivliostyle build
 
 
 {% capture viewer_description %}
-Vivliostyle Viewer は、〜〜
+ブラウザで動作する組版エンジン。HTML を読み込んで組版結果をブラウザに表示します。
 {% endcapture %}
 
 
 {% capture viewer_frame1_description %}
-〜〜
-
-Vivliostyle CLI の preview 機能との違いは、〜〜
+HTML と CSS を用意して Vivliostyle Viewer でビルドして組版結果を確認できます。これを PDF としてダウンロードできます。サンプルを用意したのでご覧ください。
 {% endcapture %}
 
 
 {% include page/getting_started.html
-  pub_title="Vivliostyle Pub"
+  pub_title="Vivliostyle Pub <small>(初期版を今年中に公開予定)</small>"
   pub_tip="v2.x.x"
   pub_description=pub_description
   pub_buttontext="Vivliostyle Pub を使う"
   pub_buttonlink=""
   pub_buttonlink_github=""
-  pub_frame1_title="CSS組版で本を作りたい！"
-  pub_frame1_description=pub_frame1_description
-  pub_gallery=site.data.pub.gallery.ja
 
-  cli_title="Vivliostyle CLI"
+  cli_title="Vivliostyle CLI <small>(2月中公開予定)</small>"
   cli_tip="v2.x.x"
   cli_description=cli_description
   cli_link_github=""
@@ -87,6 +66,7 @@ Vivliostyle CLI の preview 機能との違いは、〜〜
   viewer_buttontext="Vivliostyle Viewer を使う"
   viewer_buttonlink=""
   viewer_buttonlink_github=""
-  viewer_frame1_title="Webページを好みのスタイルで見たい！"
+  viewer_frame1_title="CSS組版で本を作りたい！"
   viewer_frame1_description=viewer_frame1_description
+  viewer_gallery=site.data.pub.gallery.ja
 %}
