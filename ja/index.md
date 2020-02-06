@@ -75,9 +75,9 @@ Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合�
   viewer_buttontext="Vivliostyle Viewer で読む"
   or_text="または"
 
-  core_link=""
-  pub_samplelink=""
+  core_link="https://github.com/vivliostyle/vivliostyle/tree/master/packages/core"
+  pub_samplelink="/ja/getting_started/#CSS組版で本を作りたい！"
   pub_link=""
-  cli_link=""
-  viewer_link=""
+  cli_link="https://github.com/vivliostyle/vivliostyle-cli"
+  viewer_link="https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html"
 %}

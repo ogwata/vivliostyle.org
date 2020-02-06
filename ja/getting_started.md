@@ -54,7 +54,7 @@ HTML と CSS を用意して Vivliostyle Viewer でビルドして組版結果�
   cli_title="Vivliostyle CLI <small>(2月中公開予定)</small>"
   cli_tip="v2.x.x"
   cli_description=cli_description
-  cli_link_github=""
+  cli_buttonlink_github="https://github.com/vivliostyle/vivliostyle-cli"
   cli_frame1_title="インストール方法"
   cli_frame1_description=cli_frame1_description
   cli_frame2_title="HTMLからPDFを作成する"
@@ -64,8 +64,8 @@ HTML と CSS を用意して Vivliostyle Viewer でビルドして組版結果�
   viewer_tip="v2.x.x"
   viewer_description=viewer_description
   viewer_buttontext="Vivliostyle Viewer を使う"
-  viewer_buttonlink=""
-  viewer_buttonlink_github=""
+  viewer_buttonlink="https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html"
+  viewer_buttonlink_github="https://github.com/vivliostyle/vivliostyle/tree/master/packages/viewer"
   viewer_frame1_title="CSS組版で本を作りたい！"
   viewer_frame1_description=viewer_frame1_description
   viewer_gallery=site.data.pub.gallery.ja
