@@ -1,0 +1,14 @@
+core:
+  github: "https://github.com/vivliostyle/vivliostyle/tree/master/packages/core"
+  thumbnail: "/assets/project-core.png"
+pub:
+  github: ""
+  sample: "/ja/getting_started/#CSS組版で本を作りたい！"
+  thumbnail: "/assets/project-pub.png"
+cli:
+  github: "https://github.com/vivliostyle/vivliostyle-cli"
+  thumbnail: "/assets/project-cli.png"
+viewer:
+  github: "https://github.com/vivliostyle/vivliostyle/tree/master/packages/viewer"
+  sample: "https://vivliostyle.org/viewer"
+  thumbnail: "/assets/project-viewer.png"

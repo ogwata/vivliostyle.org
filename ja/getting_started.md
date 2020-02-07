@@ -45,27 +45,27 @@ HTML と CSS を用意して Vivliostyle Viewer でビルドして組版結果�
 
 {% include page/getting_started.html
   pub_title="Vivliostyle Pub <small>(初期版を今年中に公開予定)</small>"
-  pub_tip="v2.x.x"
+  pub_tip=site.data.project.pub.version
   pub_description=pub_description
   pub_buttontext="Vivliostyle Pub を使う"
   pub_buttonlink=""
   pub_buttonlink_github=""
 
   cli_title="Vivliostyle CLI <small>(2月中公開予定)</small>"
-  cli_tip="v2.x.x"
+  cli_tip=site.data.project.cli.version
   cli_description=cli_description
-  cli_buttonlink_github="https://github.com/vivliostyle/vivliostyle-cli"
+  cli_buttonlink_github=site.data.project.cli.github
   cli_frame1_title="インストール方法"
   cli_frame1_description=cli_frame1_description
   cli_frame2_title="HTMLからPDFを作成する"
   cli_frame2_description=cli_frame2_description
 
   viewer_title="Vivliostyle Viewer"
-  viewer_tip="v2.x.x"
+  viewer_tip=site.data.project.viewer.version
   viewer_description=viewer_description
   viewer_buttontext="Vivliostyle Viewer を使う"
-  viewer_buttonlink="https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html"
-  viewer_buttonlink_github="https://github.com/vivliostyle/vivliostyle/tree/master/packages/viewer"
+  viewer_buttonlink=site.data.project.viewer.sample
+  viewer_buttonlink_github=site.data.project.viewer.github
   viewer_frame1_title="CSS組版で本を作りたい！"
   viewer_frame1_description=viewer_frame1_description
   viewer_gallery=site.data.pub.gallery.ja

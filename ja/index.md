@@ -55,10 +55,10 @@ Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合�
   animation2_src="/assets/animation2.png"
   animation3_src="/assets/animation3.png"
 
-  core_thumbnail="/assets/project-core.png"
-  pub_thumbnail="/assets/project-pub.png"
-  cli_thumbnail="/assets/project-cli.png"
-  viewer_thumbnail="/assets/project-viewer.png"
+  core_thumbnail=site.data.project.core.thumbnail
+  pub_thumbnail=site.data.project.pub.thumbnail
+  cli_thumbnail=site.data.project.cli.thumbnail
+  viewer_thumbnail=site.data.project.viewer.thumbnail
 
   project1_src="/assets/project1.png"
   project2_src="/assets/project2.png"
@@ -75,9 +75,9 @@ Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合�
   viewer_buttontext="Vivliostyle Viewer で読む"
   or_text="または"
 
-  core_link="https://github.com/vivliostyle/vivliostyle/tree/master/packages/core"
-  pub_samplelink="/ja/getting_started/#CSS組版で本を作りたい！"
-  pub_link=""
-  cli_link="https://github.com/vivliostyle/vivliostyle-cli"
-  viewer_link="https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html"
+  core_link=site.data.project.core.github
+  pub_samplelink=site.data.project.pub.sample
+  pub_link=site.data.project.pub.github
+  cli_link=site.data.project.cli.github
+  viewer_link=site.data.project.cli.sample
 %}
