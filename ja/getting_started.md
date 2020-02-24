@@ -10,7 +10,7 @@ lang: ja
 
 
 {% capture cli_description %}
-コマンドラインで CSS 組版して、印刷入稿可能なPDFx/1a で保存します。
+コマンドラインで CSS 組版して、印刷入稿可能なPDF/X-1a で保存します。
 {% endcapture %}
 
 
@@ -39,7 +39,7 @@ $ vivliostyle build
 
 
 {% capture viewer_frame1_description %}
-HTML と CSS を用意して Vivliostyle Viewer でビルドして組版結果を確認できます。これを PDF としてダウンロードできます。サンプルを用意したのでご覧ください。
+HTML と CSS を用意して Vivliostyle Viewer で組版結果を確認できます。これを PDF として出力できます。サンプルを用意したのでご覧ください。
 {% endcapture %}
 
 

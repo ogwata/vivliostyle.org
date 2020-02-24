@@ -22,22 +22,12 @@ lang: ja
 - 設立：2018 年 8 月
 - 所在地：〒336-0015 埼玉県さいたま市南区太田窪1941-84
 - 電話：090-3688-2212
-- mail：[info@vivliostyle.org](mailto:info@vivliostyle.org)
 
 ### メンバー
 {% endcapture %}
 
 
 {% capture devteam_description %}
-{% endcapture %}
-
-
-{% capture sponsor_description %}
-### このサイトに広告を出稿する
-
-### クレジットカード決済で寄付する（congrantへ）
-
-### GitHubスポンサーに応募する
 {% endcapture %}
 
 
@@ -51,6 +41,11 @@ lang: ja
   devteam_description=devteam_description
   slack_buttontext="Slackに参加"
 
-  sponsor_title="Vivliostyleのスポンサーになりませんか"
-  sponsor_description=sponsor_description
+  sponsor_title="Vivliostyle のスポンサーになりませんか"
+  advertisement_buttontext="このサイトに広告を出稿する"
+  advertisement_buttonlink=""
+  congrat_buttontext="クレジットカード決済で寄付する（congrantへ）"
+  congrat_buttonlink=""
+  github_buttontext="GitHubスポンサーに応募する"
+  github_buttonlink=""
 %}

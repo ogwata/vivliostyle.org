@@ -1,7 +1,8 @@
 image: "/assets/header-image.png"
 lead:
   en:
-    - Vivliostyle is ...
+      - An open source project for a new typesetting engine fitting for
+      - digital=web publishing based on the latest web standard technology
   ja:
     - 電子出版 ＝ Web 出版にマッチする新しい組版エンジンを
     - 最新のWeb 標準技術で作るオープンソース・プロジェクト

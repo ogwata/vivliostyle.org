@@ -37,17 +37,21 @@
 
   <div class="container">
     <div class="button-list">
-      {% include button/slack.html text=slack_buttontext %}
+      {% include button/slack.html text=include.slack_buttontext %}
     </div>
   </div>
 </section>
 
-<!-- <section class="section"> -->
-  <!-- <div class="container"> -->
-    <!-- <h2>{{ include.sponsor_title }}</h2> -->
+<section class="section">
+  <div class="container">
+    <h2>{{ include.sponsor_title }}</h2>
 
-    <!-- {{ include.sponsor_description | markdownify }} -->
-  <!-- </div> -->
-<!-- </section> -->
+    <div class="button-list">
+      <a href="{{ include.advertisement_buttonlink }}" class="button--large">{{ include.advertisement_buttontext }}</a>
+      <a href="{{ include.congrat_buttonlink }}" class="button--large">{{ include.congrat_buttontext }}</a>
+      <a href="{{ include.github_buttonlink }}" class="button--large">{{ include.github_buttontext }}</a>
+    </div>
+  </div>
+</section>
 
 {% include fetch-contributors.html id="contributors-list" %}

@@ -8,7 +8,7 @@ excerpt: "open source, web browser based CSS typesetting engine project"
 {% capture section1_description %}
 Vivliostyle Pub <small>(初期版を今年中に公開予定)</small> を使えば、EPUBや印刷可能なPDFをブラウザ上で作成できます。
 
-Vivliostyle CLI <small>(2月中公開予定)</small> でも、HTMLとCSSがあればEPUBやPDFを作成できます。
+Vivliostyle CLI でも、HTMLとCSSがあればPDFを作成できます。
 {% endcapture %}
 
 
