@@ -79,23 +79,52 @@
   }
 
   .nav__list {
+    @extend .nostyle;
+
     display: flex;
     height: fit-content;
     font-weight: 700;
     list-style: none;
   }
 
-  .nav__list--main,
-  .nav__list--sub {
+  .nav__list--menu {
     @extend .nav__list;
+
+    margin-right: 20px;
+  }
+
+  .nav__dropdown {
+    @extend .nostyle;
+
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    min-width: 100%;
+    border: 1px solid $gray_lighter;
+    transition: $hover_animation;
   }
 
   .nav__item {
+    position: relative;
+    min-width: max-content;
     background-color: $white;
     transition: $hover_animation;
 
     &:hover {
       background-color: $blue_lighter;
+
+      .nav__dropdown {
+        display: block;
+      }
+    }
+  }
+
+  .nav__item--menu {
+    @extend .nav__item;
+
+    &:hover {
+      background-color: unset;
     }
   }
 
@@ -107,7 +136,15 @@
 
   .item__icon {
     font-size: 22px;
-    margin-right: 5px;
+    margin: 0 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .nav__link {
@@ -116,11 +153,18 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 
     &:link,
     &:visited {
       color: $text_color;
     }
+  }
+
+  .nav__link--menu {
+    @extend .nav__link;
+
+    display: none;
   }
 
   // ----------
@@ -175,8 +219,28 @@
       display: none;
     }
 
-    .nav__list {
-      padding-left: 10px;
+    // MENUをドロップダウンにする
+    .nav__link--menu {
+      display: flex;
+    }
+
+    .nav__item--menu {
+      &:hover {
+        .nav__list--menu {
+          display: block;
+        }
+      }
+    }
+
+    .nav__list--menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      min-width: 100%;
+      margin: 0;
+      border: 1px solid $gray_lighter;
+      transition: $hover_animation;
     }
 
     // 左右余白を縮める
@@ -197,12 +261,15 @@
     // アイコンを大きくする
     .item__icon {
       font-size: 30px;
-      margin-right: 0;
     }
 
     // 言語とGitHubのラベルを消す
     .nav__label {
       display: none;
+    }
+
+    .nav__dropdown .nav__label {
+      display: block;
     }
 
     // クリック領域を大きくする
@@ -213,57 +280,6 @@
     // MENUを右端に持ってくる
     .global-header__nav {
       flex-direction: row-reverse;
-    }
-
-    // MENUの中身を隠す
-    .nav__list--main {
-      padding: 0;
-      font-size: 20px;
-      flex-direction: column;
-      visibility: hidden;
-      z-index: 10;
-
-      &:before {
-        content: "MENU";
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: $header_height;
-        visibility: visible;
-        cursor: pointer;
-      }
-
-      // 枠をつける
-      .nav__item {
-        border-left: 1px solid $gray_lighter;
-        border-right: 1px solid $gray_lighter;
-
-        &:first-child {
-          border-top: 1px solid $gray_lighter;
-        }
-
-        &:last-child {
-          border-bottom: 1px solid $gray_lighter;
-        }
-      }
-    }
-
-    // MENUの中身を見せる
-    .nav__list--open {
-      visibility: visible;
-
-      .nav__item {
-        opacity: 1;
-      }
-    }
-
-    // MENUの中身を隠す
-    .nav__list--close {
-      visibility: hidden;
-
-      .nav__item {
-        opacity: 0;
-      }
     }
 
     // 左側につける

@@ -17,39 +17,63 @@
     </div>
 
     <nav class="global-header__nav">
-      <ol class="nav__list--main" id="navListMain">
+      <ol class="nav__list">
         {% if page.lang == "ja" %}
           {% assign global_header = site.data.global_header.ja %}
         {% else %}
           {% assign global_header = site.data.global_header.en %}
         {% endif %}
 
-        {% for item in global_header %}
-          {% if item.url contains '://' %}
-            {% assign url = item.url %}
-          {% else %}
-            {% assign url = item.url | relative_url %}
-          {% endif %}
+        <li class="nav__item--menu">
+          <div class="nav__link--menu">
+            <span>MENU</span>
+            <i class="mdi mdi-chevron-down item__icon"></i>
+          </div>
+          <ol class="nav__list--menu">
+            {% for item in global_header %}
+              {% if item.url contains '://' %}
+                {% assign url = item.url %}
+              {% else %}
+                {% assign url = item.url | relative_url %}
+              {% endif %}
 
-          <li class="nav__item{% if item.url == page.url %}--active{% endif %}">
-            <a class="nav__link" href="{{ url }}">{{ item.title }}</a>
-          </li>
-        {% endfor %}
-      </ol>
+              {% if item.url == page.url %}
+                {% assign active = "--active" %}
+              {% else %}
+                {% assign active = "" %}
+              {% endif %}
 
-      <ol class="nav__list--sub">
+              <li class="nav__item{{ active }}">
+                <a class="nav__link" href="{{ url }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ol>
+        </li>
+
         <li class="nav__item">
-          {% if page.lang == "ja" %}
-            <a class="nav__link" href="/ja/">
-              <i class="mdi mdi-web item__icon"></i>
-              <span class="nav__label">日本語</span>
-            </a>
-          {% else %}
-            <a class="nav__link" href="/">
-              <i class="mdi mdi-web item__icon"></i>
-              <span class="nav__label">English</span>
-            </a>
-          {% endif %}
+          {% assign lang = site.data.language[page.lang] %}
+          <a class="nav__link" href="{{ lang.url }}">
+            <i class="mdi mdi-web item__icon"></i>
+            <span class="nav__label">{{ lang.name }}</span>
+            <i class="mdi mdi-chevron-down item__icon"></i>
+          </a>
+
+          <ul class="nav__dropdown">
+            {% for otherlang in site.data.language %}
+              {% if lang.name == otherlang[1].name %}
+                {% assign icon = "mdi-check" %}
+              {% else %}
+                {% assign icon = "mdi-blank" %}
+              {% endif %}
+
+              <li class="nav__item">
+                <a class="nav__link" href="{{ otherlang[1].url }}">
+                  <i class="mdi {{ icon }} item__icon"></i>
+                  <span class="nav__label">{{ otherlang[1].name }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
         </li>
 
         <li class="nav__item">
@@ -80,17 +104,3 @@
     </div>
   {% endif %}
 </header>
-
-<script>
-  const navListMain = document.getElementById("navListMain");
-
-  navListMain.addEventListener("mouseover", function(event) {
-    navListMain.classList.remove("nav__list--close")
-    navListMain.classList.add("nav__list--open")
-  });
-
-  navListMain.addEventListener("mouseout", function(event) {
-    navListMain.classList.remove("nav__list--open")
-    navListMain.classList.add("nav__list--close")
-  });
-</script>
