@@ -67,7 +67,7 @@
           {% for item in include.viewer_gallery %}
             <li>
               <a href="{{ item.url }}">
-                <img src="{{ item.src }}" class="thumbnail">
+                <img src="{{ item.src | relative_url }}" class="thumbnail">
                 <p class="gallery__name">{{ item.name }}</p>
               </a>
             </li>

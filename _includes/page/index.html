@@ -34,10 +34,10 @@
 
     <div class="thumbnail-list">
       <a href="{{ include.pub_link }}">
-        <img src="{{ include.pub_thumbnail }}" alt="" class="thumbnail">
+        <img src="{{ include.pub_thumbnail | relative_url }}" alt="" class="thumbnail">
       </a>
       <a href="{{ include.cli_link }}">
-        <img src="{{ include.cli_thumbnail }}" alt="" class="thumbnail">
+        <img src="{{ include.cli_thumbnail | relative_url }}" alt="" class="thumbnail">
       </a>
     </div>
 
@@ -57,7 +57,7 @@
 
     <div class="thumbnail-list">
       <a href="{{ include.viewer_link }}">
-        <img src="{{ include.viewer_thumbnail }}" alt="" class="thumbnail">
+        <img src="{{ include.viewer_thumbnail | relative_url }}" alt="" class="thumbnail">
       </a>
     </div>
 

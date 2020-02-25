@@ -6,11 +6,9 @@
     </div>
 
     {% if include.thumbnail %}
-      <div>
-        <a href="{{ site.baseurl }}{{ include.url }}" class="frame__link">
-          <img src="{{ include.thumbnail }}" alt="" class="frame__thumbnail">
-        </a>
-      </div>
+      <a href="{{ include.url | relative_url }}" class="frame__link">
+        <img src="{{ include.thumbnail | relative_url }}" alt="{{ include.title }}" class="frame__thumbnail">
+      </a>
     {% endif %}
   </div>
 </li>

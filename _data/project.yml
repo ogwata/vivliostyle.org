@@ -1,14 +1,20 @@
 core:
+  version: ""
   github: "https://github.com/vivliostyle/vivliostyle/tree/master/packages/core"
-  thumbnail: "/assets/project-core.png"
+  thumbnail: "assets/project-core.png"
 pub:
+  version: ""
+  url: ""
   github: ""
-  sample: "/ja/getting_started/#CSS組版で本を作りたい！"
-  thumbnail: "/assets/project-pub.png"
+  sample: "/getting_started/#CSS組版で本を作りたい！"
+  thumbnail: "assets/project-pub.png"
 cli:
+  version: ""
   github: "https://github.com/vivliostyle/vivliostyle-cli"
-  thumbnail: "/assets/project-cli.png"
+  thumbnail: "assets/project-cli.png"
 viewer:
+  version: ""
+  url: "https://vivliostyle.org/viewer"
   github: "https://github.com/vivliostyle/vivliostyle/tree/master/packages/viewer"
   sample: "https://vivliostyle.org/viewer"
-  thumbnail: "/assets/project-viewer.png"
+  thumbnail: "assets/project-viewer.png"
