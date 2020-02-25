@@ -155,7 +155,7 @@
     text-shadow: 1px 1px 3px $gray;
   }
 
-  @media screen and (max-width: $breakpoint_large) {
+  @include media_large {
     // 検索ボックスを簡略化する
     .global-header__search {
       margin-left: 10px;
@@ -186,7 +186,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_medium) {
+@include media_medium {
   .global-header {
 
     // ロゴを小さくする
@@ -286,7 +286,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@include media_small {
   .global-header {
 
     // ボタンを小さくする

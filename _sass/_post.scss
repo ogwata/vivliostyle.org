@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@include media_small {
   .post-item {
     .post__tags {
       flex-direction: row;

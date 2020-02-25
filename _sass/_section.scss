@@ -61,7 +61,7 @@
   background-color: $gray_lighter;
 }
 
-@media screen and (max-width: $breakpoint_large) {
+@include media_large {
   // 余白を縮める
   .section {
     margin: $section_top_bottom_large auto;
@@ -77,7 +77,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_medium) {
+@include media_medium {
   .container {
     img {
       max-width: unset;
@@ -85,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@include media_small {
   // 余白を縮める
   .section {
     margin: 40px 10px;

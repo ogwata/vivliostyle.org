@@ -86,7 +86,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: $breakpoint_large) {
+@include media_large {
   // サイズを小さくする
   .heading .heading__link {
     left: -40px;
@@ -98,7 +98,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@include media_small {
   .heading .heading__link {
     left: 0;
   }

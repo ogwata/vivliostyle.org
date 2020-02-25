@@ -207,7 +207,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_large) {
+@include media_large {
   .the-vivliostyle-project {
     // 余白を縮める
     .section {
@@ -216,7 +216,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@include media_small {
   .the-vivliostyle-project {
     // 隙間を小さく
     .thumbnail-list {

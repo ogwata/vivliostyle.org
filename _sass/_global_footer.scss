@@ -64,14 +64,14 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_large) {
+@include media_large {
   // 余白を縮める
   .global-footer {
     padding: 60px 0;
   }
 }
 
-@media screen and (max-width: $breakpoint_medium) {
+@include media_medium {
   .global-footer {
     // 幅を縮める
     .global-footer__container {
@@ -96,7 +96,7 @@
   }
 }
 
-@media screen and (max-width: $breakpoint_small) {
+@include media_small {
   .global-footer {
     // 縦に並べて中央揃え
     .global-footer__container {
