@@ -48,14 +48,16 @@
         </li>
 
         <li class="nav__item">
-          <a class="nav__link" href="{{ lang.url | relative_url }}">
+          <span class="nav__link">
             <i class="mdi mdi-web item__icon"></i>
             <span class="nav__label">{{ lang.name }}</span>
             <i class="mdi mdi-chevron-down item__icon"></i>
-          </a>
+          </span>
 
           <ul class="nav__dropdown">
             {% for otherlang in site.data.language %}
+              {% assign url = page.url | remove_first: lang.url %}
+
               {% if lang.name == otherlang[1].name %}
                 {% assign icon = "mdi-check" %}
               {% else %}
@@ -63,7 +65,7 @@
               {% endif %}
 
               <li class="nav__item">
-                <a class="nav__link" href="{{ otherlang[1].url | relative_url }}">
+                <a class="nav__link" href="{{ otherlang[1].url | append: url | relative_url }}">
                   <i class="mdi {{ icon }} item__icon"></i>
                   <span class="nav__label">{{ otherlang[1].name }}</span>
                 </a>
