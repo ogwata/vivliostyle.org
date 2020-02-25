@@ -1,10 +1,13 @@
+{% include assign/lang.html %}
+{% assign global_header = site.data.global_header[lang.code] %}
+
 <header class="global-header">
   <div class="global-header__container">
 
     <div class="global-header__brand">
-      <a href="{{ site.baseurl }}/ja">
+      <a href="{{ lang.url | relative_url }}">
         <h1>
-          <img class="global-header__logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title | append: ' logo' }}"/>
+          <img class="global-header__logo" src="{{ site.logo | relative_url }}" alt="{{ site.title | append: ' logo' }}"/>
         </h1>
       </a>
 
@@ -18,12 +21,6 @@
 
     <nav class="global-header__nav">
       <ol class="nav__list">
-        {% if page.lang == "ja" %}
-          {% assign global_header = site.data.global_header.ja %}
-        {% else %}
-          {% assign global_header = site.data.global_header.en %}
-        {% endif %}
-
         <li class="nav__item--menu">
           <div class="nav__link--menu">
             <span>MENU</span>
@@ -51,8 +48,7 @@
         </li>
 
         <li class="nav__item">
-          {% assign lang = site.data.language[page.lang] %}
-          <a class="nav__link" href="{{ lang.url }}">
+          <a class="nav__link" href="{{ lang.url | relative_url }}">
             <i class="mdi mdi-web item__icon"></i>
             <span class="nav__label">{{ lang.name }}</span>
             <i class="mdi mdi-chevron-down item__icon"></i>
@@ -67,7 +63,7 @@
               {% endif %}
 
               <li class="nav__item">
-                <a class="nav__link" href="{{ otherlang[1].url }}">
+                <a class="nav__link" href="{{ otherlang[1].url | relative_url }}">
                   <i class="mdi {{ icon }} item__icon"></i>
                   <span class="nav__label">{{ otherlang[1].name }}</span>
                 </a>
@@ -87,18 +83,13 @@
   </div>
 
   {% if page.jumbotron_image %}
+    {% assign lead = site.data.jumbotron.lead[lang.code] %}
+
     <div class="jumbotron" style="background-image: url({{ site.data.jumbotron.image }})">
       <p class="jumbotron__lead--top">CSS Typesetting</p>
-
-      {% if page.lang == "ja" and site.data.jumbotron.lead.ja %}
-        {% assign lead = site.data.jumbotron.lead.ja %}
-      {% else %}
-        {% assign lead = site.data.jumbotron.lead.en %}
-      {% endif %}
-
       <p class="jumbotron__lead">
         {% for line in lead %}
-          {{ line }}<br/>
+        {{ line }}<br/>
         {% endfor %}
       </p>
     </div>
