@@ -1,4 +1,4 @@
-.the-vivliostyle-project {
+.page_home {
 
   // ----------
   // section
@@ -208,7 +208,7 @@
 }
 
 @include media_large {
-  .the-vivliostyle-project {
+  .page_home {
     // 余白を縮める
     .section {
       padding: $section_top_bottom_large calc((100vw - #{$section_width_large}) / 2);
@@ -217,7 +217,7 @@
 }
 
 @include media_small {
-  .the-vivliostyle-project {
+  .page_home {
     // 隙間を小さく
     .thumbnail-list {
       > * {

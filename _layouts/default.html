@@ -31,7 +31,7 @@
 
   {% assign title_class = page.title | slugify %}
 
-  <body class="layout-{{ page.layout }} {{ title_class }}">
+  <body class="layout-{{ page.layout }} {{ title_class }} {% if index_flag == 0 %}page_home{% endif %}">
     {{ content }}
 
     {% if site.serviceWorker != false %}
