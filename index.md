@@ -1,5 +1,5 @@
 ---
-title: The Vivliostyle Project
+title: Vivliostyle — Enjoy CSS Typesetting!
 layout: page
 jumbotron_image: true
 excerpt: "open source, web browser based CSS typesetting engine project"

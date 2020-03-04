@@ -9,7 +9,13 @@
 
     {% include google-analytics.html %}
 
-    {% seo %}
+    {% assign index_flag = page.url | remove: "/" | remove_first: page.lang | size %}
+    {% if index_flag == 0 %}
+      <title>{{ page.title }}</title>
+      {% seo title=false %}
+    {% else %}
+      {% seo %}
+    {% endif %}
 
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>

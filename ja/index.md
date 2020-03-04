@@ -1,5 +1,5 @@
 ---
-title: The Vivliostyle Project
+title: Vivliostyle — 楽しく CSS 組版！
 lang: ja
 jumbotron_image: true
 excerpt: "open source, web browser based CSS typesetting engine project"
