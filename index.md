@@ -48,6 +48,8 @@ The Vivliostyle project discusses development matters on Slack. Please take a lo
 
   slack_buttontext="Join our Slack"
   github_buttontext="Join development"
+  document_buttontext="See Documents"
+  document_buttonlink="/documents"
 
   posts=posts
 

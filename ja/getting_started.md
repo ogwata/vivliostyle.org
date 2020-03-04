@@ -48,8 +48,8 @@ HTML と CSS を用意して Vivliostyle Viewer で組版結果を確認でき�
   pub_tip=site.data.project.pub.version
   pub_description=pub_description
   pub_buttontext="Vivliostyle Pub を使う"
-  pub_buttonlink=""
-  pub_buttonlink_github=""
+  pub_buttonlink=site.data.project.pub.url
+  pub_buttonlink_github=site.data.project.pub.github
 
   cli_title="Vivliostyle CLI <small>(2月中公開予定)</small>"
   cli_tip=site.data.project.cli.version

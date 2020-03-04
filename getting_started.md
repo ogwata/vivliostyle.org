@@ -47,8 +47,8 @@ Prepare HTML and CSS files and view the formatted result with Vivliostyle Viewer
   pub_tip=site.data.project.pub.version
   pub_description=pub_description
   pub_buttontext="Use Vivliostyle Pub"
-  pub_buttonlink=""
-  pub_buttonlink_github=""
+  pub_buttonlink=site.data.project.pub.url
+  pub_buttonlink_github=site.data.project.pub.github
 
   cli_title="Vivliostyle CLI <small>(To be released in February)</small>"
   cli_tip=site.data.project.cli.version

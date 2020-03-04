@@ -48,6 +48,8 @@ Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合�
 
   slack_buttontext="Slackに参加"
   github_buttontext="開発に参加"
+  document_buttontext="ドキュメントを見る"
+  document_buttonlink="/ja/documents"
 
   posts=posts
 
