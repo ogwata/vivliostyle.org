@@ -21,40 +21,14 @@
     {{ include.plan_description | markdownify }}
 
     <ol class="frame-list">
-      {% include plan.html
-        title=include.plan_core_title
-        description=include.plan_core_description
-        url=include.plan_core_url
-        thumbnail=include.plan_core_thumbnail
-      %}
-
-      {% include plan.html
-        title=include.plan_pub_title
-        description=include.plan_pub_description
-        url=include.plan_pub_url
-        thumbnail=include.plan_pub_thumbnail
-      %}
-
-      {% include plan.html
-        title=include.plan_cli_title
-        description=include.plan_cli_description
-        url=include.plan_cli_url
-        thumbnail=include.plan_cli_thumbnail
-      %}
-
-      {% include plan.html
-        title=include.plan_viewer_title
-        description=include.plan_viewer_description
-        url=include.plan_viewer_url
-        thumbnail=include.plan_viewer_thumbnail
-      %}
-
-      {% include plan.html
-        title=include.plan_others_title
-        description=include.plan_others_description
-        url=include.plan_others_url
-        thumbnail=include.plan_others_thumbnail
-      %}
+      {% for plan in include.plans %}
+        {% include plan.html
+          title=plan.title
+          description=plan.description
+          url=plan.url
+          thumbnail=plan.thumbnail
+        %}
+      {% endfor %}
     </ol>
   </div>
 </section>

@@ -123,6 +123,9 @@
     <div class="button-list">
       {% include button/slack.html text=include.slack_buttontext %}
       {% include button/github.html text=include.github_buttontext %}
+      <a href="{{ include.document_buttonlink }}" class="button--large">
+        {{ include.document_buttontext }}
+      </a>
     </div>
   </div>
 </section>

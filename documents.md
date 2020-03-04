@@ -40,11 +40,6 @@ title: Documents
 {% endcapture %}
 
 
-{% capture plan_description %}
-Would you like to contribute?
-{% endcapture %}
-
-
 {% capture plan_core_description %}
 - Planning for the 2020 releases
 - Version notation is vX.X.X format
@@ -72,13 +67,46 @@ Would you like to contribute?
 {% endcapture %}
 
 
-{% capture license_description %}
-{% endcapture %}
+{% include assign/hash.html
+  title="Vivliostyle Core"
+  url=site.data.project.core.github
+  description=plan_core_description
+  thumbnail=site.data.project.core.thumbnail
+%}{% assign core = hash %}
 
 
-{% capture community_description %}
-Vivliostyle project discusses development matters on Slack.
-{% endcapture %}
+{% include assign/hash.html
+  title="Vivliostyle Pub"
+  url=site.data.project.pub.github
+  description=plan_pub_description
+  thumbnail=site.data.project.pub.thumbnail
+%}{% assign pub = hash %}
+
+
+{% include assign/hash.html
+  title="Vivliostyle CLI"
+  url=site.data.project.cli.github
+  description=plan_cli_description
+  thumbnail=site.data.project.cli.thumbnail
+%}{% assign cli = hash %}
+
+
+{% include assign/hash.html
+  title="Vivliostyle Viewer"
+  url=site.data.project.viewer.github
+  description=plan_viewer_description
+  thumbnail=site.data.project.viewer.thumbnail
+%}{% assign viewer = hash %}
+
+
+{% include assign/hash.html
+  title="Others"
+  description=plan_others_description
+%}{% assign others = hash %}
+
+
+{% assign plans = "" | split: "" | push: core | push: pub | push: cli | push: viewer | push: others %}
+
 
 {% include page/documents.html
   guide_title="Guide"
@@ -88,38 +116,13 @@ Vivliostyle project discusses development matters on Slack.
   reference_description=reference_description
 
   plan_title="Development Plan"
-  plan_description=plan_description
+  plan_description="Would you like to contribute?"
   plans=plans
 
-  plan_core_title="Vivliostyle Core"
-  plan_core_url=""
-  plan_core_description=plan_core_description
-  plan_core_thumbnail="/assets/project-core.png"
-
-  plan_pub_title="Vivliostyle Pub"
-  plan_pub_url=""
-  plan_pub_description=plan_pub_description
-  plan_pub_thumbnail="/assets/project-pub.png"
-
-  plan_cli_title="Vivliostyle CLI"
-  plan_cli_url=""
-  plan_cli_description=plan_cli_description
-  plan_cli_thumbnail="/assets/project-cli.png"
-
-  plan_viewer_title="Vivliostyle Viewer"
-  plan_viewer_url=""
-  plan_viewer_description=plan_viewer_description
-  plan_viewer_thumbnail="/assets/project-viewer.png"
-
-  plan_others_title="Others"
-  plan_others_url=""
-  plan_others_description=plan_others_description
-
   license_title="License"
-  license_description=license_description
+  license_description=""
 
   community_title="Community invitation"
-  community_description=community_description
+  community_description="Vivliostyle project discusses development matters on Slack."
   slack_buttontext="Join our Slack"
 %}
-

@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{% include assign/lang.html %}
+{% assign members = site.data.people[lang.code] %}
+
 {% include global-header.html %}
 
 <main class="main">
@@ -16,7 +19,7 @@ layout: default
 
       {% include post-author.html
         author=page.author
-        members=site.data.people.ja
+        members=members
       %}
 
       <div class="container">

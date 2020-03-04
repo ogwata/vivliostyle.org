@@ -2,8 +2,6 @@
   <div class="container">
     <h2>{{ include.title }}</h2>
 
-    {% for content in include.contents %}
-      {{ content | markdownify }}
-    {% endfor %}
+    {{ contents | markdownify }}
   </div>
 </section>
