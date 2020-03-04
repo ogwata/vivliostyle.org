@@ -26,8 +26,13 @@
   // ----------
 
   .global-header__search {
+    position: relative;
     display: flex;
-    margin-left: 40px;
+    margin: 40px;
+  }
+
+  .global-header__searchfield {
+    display: flex;
     color: $gray_light;
   }
 
@@ -68,6 +73,61 @@
     border-bottom-right-radius: 25px;
     font-size: $body_font_size;
     transition: $hover_animation;
+  }
+
+  .global-header__searchresult {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 80px;
+    width: 50vw;
+    padding: 20px 40px;
+    border: 1px solid $gray_light;
+    background: $white;
+    transition: $hover_animation;
+    color: $gray;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      border-bottom: 30px solid $gray_light;
+      border-top: 30px solid transparent;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -58px;
+      transform: scale(0.95);
+      border-bottom: 30px solid $white;
+      border-top: 30px solid transparent;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+    }
+  }
+
+  .global-header__searchresult.open {
+    display: block;
+  }
+
+  .searchresult__header {
+    font-size: $display_font_size;
+    text-align: right;
+  }
+
+  .searchresult__closeicon {
+    cursor: pointer;
+  }
+
+  .searchresult__list {
+    @extend .nostyle;
+
+    > * {
+      margin: 20px 0;
+    }
   }
 
   // ----------
@@ -200,25 +260,6 @@
   }
 
   @include media_large {
-    // 検索ボックスを簡略化する
-    .global-header__search {
-      margin-left: 10px;
-    }
-
-    .global-header__searchicon {
-      padding: 0;
-      border: 0;
-      color: $text_color;
-
-      &:after {
-        content: unset;
-      }
-    }
-
-    .global-header__input {
-      display: none;
-    }
-
     // MENUをドロップダウンにする
     .nav__link--menu {
       display: flex;
@@ -272,11 +313,6 @@
       display: block;
     }
 
-    // クリック領域を大きくする
-    .nav__link {
-      padding: 0 24px;
-    }
-
     // MENUを右端に持ってくる
     .global-header__nav {
       flex-direction: row-reverse;
@@ -285,6 +321,11 @@
     // 左側につける
     .nav__item--active {
       box-shadow: inset 6px 0 0 $primary_color;
+    }
+
+    // 検索ボックスをなくす
+    .global-header__search {
+      display: none;
     }
 
     // 高さを可変にする

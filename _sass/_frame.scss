@@ -25,6 +25,16 @@
   }
 }
 
+.frame--small {
+  @extend .frame;
+
+  padding: 30px;
+
+  .heading__link {
+    @extend .nostyle;
+  }
+}
+
 .frame__contents {
   display: flex;
   justify-content: space-between;
