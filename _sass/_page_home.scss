@@ -5,9 +5,9 @@
   // ----------
 
   .section {
-    width: 100vw;
+    width: 100%;
     margin: 0;
-    padding: 100px calc((100vw - #{$section_width}) / 2);
+    padding: 100px calc((100% - #{$section_width}) / 2);
     font-size: $display_font_size;
     color: $gray_dark;
 
