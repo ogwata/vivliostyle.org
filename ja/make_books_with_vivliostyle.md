@@ -71,7 +71,11 @@ lang: ja
 %}{% assign vol1 = hash %}
 
 
-{% assign books = "" | split: "|" | push: vol3 | push: vol2 | push: vol1 %}
+{% include assign/array.html
+  vol3=vol3
+  vol2=vol2
+  vol1=vol1
+%}{% assign books = array %}
 
 
 {% include page/make_books_with_vivliostyle.html
