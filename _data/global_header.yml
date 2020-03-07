@@ -1,8 +1,8 @@
 en:
-  - title: Special
-    url: /ja/make_books_with_vivliostyle/
   - title: Getting Started
     url: /getting_started
+  - title: Sample
+    url: /sample
   - title: Documents
     url: /documents
   - title: FAQ
@@ -10,10 +10,10 @@ en:
   - title: Blog
     url: /blog
 ja:
-  - title: 特集
-    url: /ja/make_books_with_vivliostyle/
   - title: 使ってみる
     url: /ja/getting_started/
+  - title: サンプル
+    url: /ja/sample
   - title: ドキュメント
     url: /ja/documents/
   - title: FAQ
