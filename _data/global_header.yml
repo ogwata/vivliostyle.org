@@ -1,19 +1,19 @@
 en:
   - title: Getting Started
-    url: /getting_started
+    url: /getting_started/
   - title: Sample
-    url: /sample
+    url: /sample/
   - title: Documents
-    url: /documents
+    url: /documents/
   - title: FAQ
-    url: /faq
+    url: /faq/
   - title: Blog
-    url: /blog
+    url: /blog/
 ja:
   - title: 使ってみる
     url: /ja/getting_started/
   - title: サンプル
-    url: /ja/sample
+    url: /ja/sample/
   - title: ドキュメント
     url: /ja/documents/
   - title: FAQ
