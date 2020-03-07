@@ -39,11 +39,6 @@ A typesetting engine that runs on the browser. Read HTML and display the formatt
 {% endcapture %}
 
 
-{% capture viewer_frame1_description %}
-Prepare HTML and CSS files and view the formatted result with Vivliostyle Viewer. This can be output as PDF.
-{% endcapture %}
-
-
 {% include page/getting_started.html
   pub_title="Vivliostyle Pub <small>(Initial version will be released later this year)</small>"
   pub_tip=site.data.project.pub.version
@@ -68,6 +63,4 @@ Prepare HTML and CSS files and view the formatted result with Vivliostyle Viewer
   viewer_buttonlink=site.data.project.viewer.sample
   viewer_buttonlink_github=site.data.project.viewer.github
   viewer_frame1_title="Want to make a book with CSS typesetting!"
-  viewer_frame1_description=viewer_frame1_description
-  viewer_gallery=site.data.pub.gallery.en
 %}

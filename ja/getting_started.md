@@ -40,11 +40,6 @@ $ vivliostyle build
 {% endcapture %}
 
 
-{% capture viewer_frame1_description %}
-HTML と CSS を用意して Vivliostyle Viewer で組版結果を確認できます。これを PDF として出力できます。サンプルを用意したのでご覧ください。
-{% endcapture %}
-
-
 {% include page/getting_started.html
   pub_title="Vivliostyle Pub <small>(初期版を今年中に公開予定)</small>"
   pub_tip=site.data.project.pub.version
@@ -69,6 +64,4 @@ HTML と CSS を用意して Vivliostyle Viewer で組版結果を確認でき�
   viewer_buttonlink=site.data.project.viewer.sample
   viewer_buttonlink_github=site.data.project.viewer.github
   viewer_frame1_title="CSS組版で本を作りたい！"
-  viewer_frame1_description=viewer_frame1_description
-  viewer_gallery=site.data.pub.gallery.ja
 %}

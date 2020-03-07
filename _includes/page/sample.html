@@ -1,0 +1,49 @@
+{% for category in include.categories %}
+  <section class="section">
+    <div class="container">
+      <h2>{{ category.title }}</h2>
+
+      {{ category.description | markdownify }}
+
+      {% for sample in category.samples %}
+        <h3>{{ sample.title }}</h3>
+
+        <div>
+          <a href="{{ sample.urls[0].viewer }}">
+            <img src="{{ sample.img | relative_url }}" class="thumbnail">
+          </a>
+
+          <div>
+            {{ sample.description | markdownify }}
+
+            {% for item in sample.urls %}
+              <div class="button-list">
+                {% if item.name %}
+                  <h4>{{ item.name }}</h4>
+                {% endif %}
+                {% if item.viewer %}
+                  {% include button/button.html link=item.viewer text=include.viewer_buttontext class="button--secondary--medium" %}
+                {% endif %}
+                {% if item.print %}
+                  {% include button/button.html link=item.print text=include.print_buttontext class="button--secondary--medium" %}
+                {% endif %}
+                {% if item.html %}
+                  {% include button/button.html link=item.html text=include.html_buttontext class="button--secondary--medium" %}
+                {% endif %}
+                {% if item.source %}
+                  {% include button/github.html link=item.source text=include.source_buttontext class="button--github--medium" %}
+                {% endif %}
+              </div>
+            {% endfor %}
+
+            <div>
+              {% for tag in sample.tags %}
+                <span class="tip">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
