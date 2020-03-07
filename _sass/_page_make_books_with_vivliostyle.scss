@@ -1,0 +1,27 @@
+.page_make_books_with_vivliostyle {
+  .frame__thumbnail {
+    width: 400px;
+    margin-right: 20px;
+  }
+
+  .book__toc {
+    @extend .nostyle;
+  }
+
+  .toc__content {
+    display: flex;
+  }
+
+  .toc__type {
+    margin-right: 10px;
+    line-height: initial;
+    font-size: $h5_font_size;
+  }
+
+  @include media_small {
+    .frame__thumbnail {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

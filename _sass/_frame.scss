@@ -38,6 +38,10 @@
 .frame__contents {
   display: flex;
   justify-content: space-between;
+
+  img {
+    margin: 0 auto;
+  }
 }
 
 .frame__title {
@@ -53,4 +57,10 @@
 
   width: 210px;
   margin-left: 20px;
+}
+
+@include media_medium {
+  .frame__thumbnail {
+    margin: 30px auto;
+  }
 }

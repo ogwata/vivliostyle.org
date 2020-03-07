@@ -76,3 +76,15 @@
   border-color: $github_color;
   background-color: $github_color;
 }
+
+.button--large--secondary {
+  @extend .button--large;
+
+  border-color: $text_color;
+  background-color: $white;
+
+  &:link,
+  &:visited {
+    color: $text_color;
+  }
+}

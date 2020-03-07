@@ -31,6 +31,8 @@ en:
         url: /faq
       - title: Logo
         url: /logo
+      - title: Make Books with Vivliostyle
+        url: /make_books_with_vivliostyle
 ja:
   - title: 使ってみる
     links:
@@ -64,3 +66,5 @@ ja:
         url: /ja/faq
       - title: ロゴ
         url: /ja/logo
+      - title: Vivliostyle で本を作ろう
+        url: /ja/make_books_with_vivliostyle
