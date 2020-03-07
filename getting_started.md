@@ -5,6 +5,8 @@ title: Getting Started
 
 {% capture pub_description %}
 Edit text/Markdown/HTML in the left pane and preview the formatted results in the right pane.
+
+![](/assets/screenshot-pub.png)
 {% endcapture %}
 
 

@@ -6,6 +6,8 @@ lang: ja
 
 {% capture pub_description %}
 左ペインでテキスト / Markdown / HTML を入力・編集すると、右ペインで組版結果がプレビューできます。
+
+![](/assets/screenshot-pub.png)
 {% endcapture %}
 
 
