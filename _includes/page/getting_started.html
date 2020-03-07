@@ -1,22 +1,6 @@
 <section class="section">
   <div class="container">
     <h2>
-      {{ include.pub_title }}
-      <!-- <span class="tip">{{ include.pub_tip }}</span> -->
-    </h2>
-
-    {{ include.pub_description | markdownify }}
-
-    <!-- <div class="button-list"> -->
-      <!-- <a href="{{ include.pub_buttonlink }}" class="button--large">{{ include.pub_buttontext }}</a> -->
-      <!-- {% include button/github.html link=include.pub_buttonlink_github text="README" %} -->
-    <!-- </div> -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2>
       {{ include.cli_title }}
       <!-- <span class="tip">{{ include.cli_tip }}</span> -->
     </h2>
@@ -75,5 +59,21 @@
         </ul>
       </li>
     </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>
+      {{ include.pub_title }}
+      <!-- <span class="tip">{{ include.pub_tip }}</span> -->
+    </h2>
+
+    {{ include.pub_description | markdownify }}
+
+    <!-- <div class="button-list"> -->
+      <!-- <a href="{{ include.pub_buttonlink }}" class="button--large">{{ include.pub_buttontext }}</a> -->
+      <!-- {% include button/github.html link=include.pub_buttonlink_github text="README" %} -->
+    <!-- </div> -->
   </div>
 </section>

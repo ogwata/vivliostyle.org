@@ -1,12 +1,12 @@
 en:
   - title: getting_started
     links:
-      - title: Vivliostyle Pub
-        url: /getting_started#Vivliostyle Pub
       - title: Vivliostyle CLI
         url: /getting_started#Vivliostyle CLI
       - title: Vivliostyle Viewer
         url: /getting_started#Vivliostyle Viewer
+      - title: Vivliostyle Pub
+        url: /getting_started#Vivliostyle Pub
   - title: documents
     links:
       - title: User Guide
@@ -36,12 +36,12 @@ en:
 ja:
   - title: 使ってみる
     links:
-      - title: Vivliostyle Pub
-        url: /ja/getting_started#Vivliostyle Pub
       - title: Vivliostyle CLI
         url: /ja/getting_started#Vivliostyle CLI
       - title: Vivliostyle Viewer
         url: /ja/getting_started#Vivliostyle Viewer
+      - title: Vivliostyle Pub
+        url: /ja/getting_started#Vivliostyle Pub
   - title: 開発する
     links:
       - title: ユーザーガイド
