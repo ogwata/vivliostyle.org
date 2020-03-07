@@ -3,11 +3,11 @@
   width: $section_width;
 
   &:first-child {
-    margin-top: $section_first_top_bottom;
+    margin: $section_first_top_bottom auto $section_top_bottom;
   }
 
   &:last-child {
-    margin-bottom: $section_first_top_bottom;
+    margin: $section_top_bottom auto $section_first_top_bottom;
   }
 }
 
@@ -68,11 +68,11 @@
     width: $section_width_large;
 
     &:first-child {
-      margin-top: $section_first_top_bottom_large;
+      margin: $section_first_top_bottom_large auto $section_top_bottom_large;
     }
 
     &:last-child {
-      margin-bottom: $section_first_top_bottom_large;
+      margin: $section_top_bottom_large auto $section_first_top_bottom_large;
     }
   }
 }
