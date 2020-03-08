@@ -1,8 +1,8 @@
-<div class="button-list">
+<ul class="list--medium">
   {% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
   {% capture twitter_share_link %}https://twitter.com/intent/tweet/?url={{ url }}&text={{ page.title | uri_escape }}{% endcapture %}
   {% capture facebook_share_link %}https://www.facebook.com/sharer/sharer.php?u={{ url }}{% endcapture %}
 
-  {% include button/twitter.html link=twitter_share_link %}
-  {% include button/facebook.html link=facebook_share_link %}
-</div>
+  <li>{% include button/twitter.html link=twitter_share_link %}</li>
+  <li>{% include button/facebook.html link=facebook_share_link %}</li>
+</ul>

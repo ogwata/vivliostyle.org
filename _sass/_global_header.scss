@@ -1,161 +1,66 @@
+@mixin nav_item {
+  flex-shrink: 0;
+  position: relative;
+  background-color: $white;
+  transition: $hover_animation;
+
+  &:hover {
+    background-color: $blue_lighter;
+
+    .nav__dropdown {
+      display: block;
+    }
+  }
+}
+
 .global-header {
+  @include list;
+
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: $header_height;
+  padding: 0 $gap_large;
 
   // ----------
-  // global-header
+  // logo
   // ----------
 
-  .global-header__container {
-    height: $header_height;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
+  .global-header__brand {
+    @include list;
+
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
   .global-header__logo {
     width: auto;
-    height: 50px;
-  }
-
-  .global-header__brand {
-    display: flex;
-    align-items: center;
-  }
-
-  // ----------
-  // search
-  // ----------
-
-  .global-header__search {
-    position: relative;
-    display: flex;
-    margin: 40px;
-  }
-
-  .global-header__searchfield {
-    display: flex;
-    color: $gray_light;
-  }
-
-  .global-header__searchicon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding-left: 10px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid $gray_light;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    background: $white;
-    font-size: 26px;
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 2px;
-      right: -2px;
-      height: calc(50px - 2px);
-      background: $white;
-    }
-  }
-
-  .global-header__input {
-    width: 160px;
-    height: 50px;
-    margin: 0;
-    padding: 10px 20px 10px 0px;
-    background: $white;
-    appearance: none;
-    outline: none;
-    border: 1px solid $gray_light;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    font-size: $body_font_size;
-    transition: $hover_animation;
-  }
-
-  .global-header__searchresult {
-    display: none;
-    position: absolute;
-    z-index: 10;
-    top: 80px;
-    width: 50vw;
-    padding: 20px 40px;
-    border: 1px solid $gray_light;
-    background: $white;
-    transition: $hover_animation;
-    color: $gray;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: -60px;
-      border-bottom: 30px solid $gray_light;
-      border-top: 30px solid transparent;
-      border-left: 30px solid transparent;
-      border-right: 30px solid transparent;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: -58px;
-      transform: scale(0.95);
-      border-bottom: 30px solid $white;
-      border-top: 30px solid transparent;
-      border-left: 30px solid transparent;
-      border-right: 30px solid transparent;
-    }
-  }
-
-  .global-header__searchresult.open {
-    display: block;
-  }
-
-  .searchresult__header {
-    font-size: $display_font_size;
-    text-align: right;
-  }
-
-  .searchresult__closeicon {
-    cursor: pointer;
-  }
-
-  .searchresult__list {
-    @extend .nostyle;
-
-    > * {
-      margin: 20px 0;
-    }
+    height: 40px;
   }
 
   // ----------
   // nav
   // ----------
 
-  .global-header__nav {
-    display: flex;
-  }
-
-  .nav__list {
-    @extend .nostyle;
-
-    display: flex;
-    height: fit-content;
-    font-weight: 700;
-    list-style: none;
-  }
-
+  .nav__list,
   .nav__list--menu {
-    @extend .nav__list;
+    @include list;
 
-    margin-right: 20px;
+    flex-wrap: nowrap;
+    font-weight: $bold_font_weight;
+  }
+
+  .nav__item,
+  .nav__item--menu {
+    @include nav_item;
+  }
+
+  .nav__item--active {
+    @include nav_item;
+
+    box-shadow: inset 0 -6px 0 $primary_color;
   }
 
   .nav__dropdown {
-    @extend .nostyle;
-
     display: none;
     position: absolute;
     right: 0;
@@ -163,35 +68,6 @@
     min-width: 100%;
     border: 1px solid $gray_lighter;
     transition: $hover_animation;
-  }
-
-  .nav__item {
-    position: relative;
-    min-width: max-content;
-    background-color: $white;
-    transition: $hover_animation;
-
-    &:hover {
-      background-color: $blue_lighter;
-
-      .nav__dropdown {
-        display: block;
-      }
-    }
-  }
-
-  .nav__item--menu {
-    @extend .nav__item;
-
-    &:hover {
-      background-color: unset;
-    }
-  }
-
-  .nav__item--active {
-    @extend .nav__item;
-
-    box-shadow: inset 0 -6px 0 $primary_color;
   }
 
   .item__icon {
@@ -207,11 +83,12 @@
     }
   }
 
-  .nav__link {
-    height: $header_height;
-    padding: 0 24px;
+  .nav__link,
+  .nav__link--menu {
     display: flex;
     align-items: center;
+    height: $header_height;
+    padding: 0 24px;
     text-decoration: none;
     cursor: pointer;
 
@@ -222,41 +99,7 @@
   }
 
   .nav__link--menu {
-    @extend .nav__link;
-
     display: none;
-  }
-
-  // ----------
-  // jumbotron
-  // ----------
-
-  .jumbotron {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 100px 80px;
-    height: 550px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
-
-  .jumbotron__lead {
-    font-family: $vivliostyle_font, $body_font;
-    font-size: $display_font_size;
-    color: $white;
-  }
-
-  .jumbotron__lead--top {
-    @extend .jumbotron__lead;
-
-    font-size: 80px;
-    font-weight: 500;
-    margin-bottom: 50px;
-    line-height: 1;
-    letter-spacing: -2px;
-    text-shadow: 1px 1px 3px $gray;
   }
 
   @include media_large {
@@ -284,27 +127,19 @@
       transition: $hover_animation;
     }
 
-    // 左右余白を縮める
-    .nav__link {
-      padding: 0 10px;
+    // アクティブの印を左側につける
+    .nav__item--active {
+      box-shadow: inset 6px 0 0 $primary_color;
     }
   }
-}
 
-@include media_medium {
-  .global-header {
-
-    // ロゴを小さくする
-    .global-header__logo {
-      height: 40px;
-    }
-
+  @include media_medium {
     // アイコンを大きくする
     .item__icon {
-      font-size: 30px;
+      font-size: 32px;
     }
 
-    // 言語とGitHubのラベルを消す
+    // ラベルを消す
     .nav__label {
       display: none;
     }
@@ -313,64 +148,30 @@
       display: block;
     }
 
-    // MENUを右端に持ってくる
-    .global-header__nav {
-      flex-direction: row-reverse;
-    }
-
-    // 左側につける
-    .nav__item--active {
-      box-shadow: inset 6px 0 0 $primary_color;
-    }
-
-    // 検索ボックスをなくす
-    .global-header__search {
-      display: none;
-    }
-
-    // 高さを可変にする
-    .jumbotron {
-      height: auto;
-      padding: 80px;
-    }
-
-    // 改行をなくす
-    .jumbotron__lead {
-      br {
-        display: none;
-      }
+    // メニューを幅いっぱいに広げる
+    .nav__item,
+    .nav__item--menu {
+      position: unset;
     }
   }
-}
 
-@include media_small {
-  .global-header {
+  @include media_small {
+    padding: 0 20px;
 
     // ボタンを小さくする
-    .nav__link {
-      padding: 0 10px;
-    }
-
-    .global-header__container {
-      padding: 0 10px;
+    .nav__link,
+    .nav__link--menu {
+      padding: 0 20px;
     }
 
     .global-header__logo {
       height: 30px;
     }
 
-    .jumbotron {
-      padding: 40px 10px;
-      text-align: center;
-    }
-
-    .jumbotron__lead {
-      font-size: 15px;
-    }
-
-    .jumbotron__lead--top {
-      margin-bottom: 40px;
-      font-size: 50px;
+    .item__icon {
+      &:last-child {
+        display: none;
+      }
     }
   }
 }

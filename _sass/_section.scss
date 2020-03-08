@@ -1,105 +1,56 @@
-.section {
+@mixin section {
   margin: $section_top_bottom auto;
   width: $section_width;
 
   &:first-child {
-    margin: $section_first_top_bottom auto $section_top_bottom;
+    margin-top: $section_first_top_bottom;
   }
 
   &:last-child {
-    margin: $section_top_bottom auto $section_first_top_bottom;
-  }
-}
-
-// Markdownで書かれたコンテンツを表示する領域
-.container {
-  > p,
-  > ul,
-  > ol,
-  > blockquote,
-  > pre {
-    margin: 20px 0;
+    margin-bottom: $section_first_top_bottom;
   }
 
-  img {
-    margin: 30px auto;
-    max-width: 50vw;
-  }
-
-  .list {
-    margin: 30px 0;
-
-    img {
-      margin: 0;
-    }
-  }
-}
-
-.section--center {
-  @extend .section;
-
-  text-align: center;
-
-  .heading__link {
-    @extend .nostyle;
-  }
-
-  .list {
-    justify-content: center;
-  }
-
-  .frame {
-    text-align: left;
-  }
-}
-
-.section--center--gray {
-  @extend .section--center;
-
-  margin: 0;
-  padding: $section_top_bottom calc((100vw - #{$section_width}) / 2);
-  background-color: $gray_lighter;
-}
-
-@include media_large {
-  // 余白を縮める
-  .section {
-    margin: $section_top_bottom_large auto;
+  @include media_large {
+    // 幅を広げる
     width: $section_width_large;
 
+    // 一番上と一番下の余白を縮める
     &:first-child {
-      margin: $section_first_top_bottom_large auto $section_top_bottom_large;
+      margin-top: $section_first_top_bottom_large;
     }
 
     &:last-child {
-      margin: $section_top_bottom_large auto $section_first_top_bottom_large;
+      margin-bottom: $section_first_top_bottom_large;
     }
   }
 }
 
-@include media_medium {
-  .container {
-    img {
-      max-width: unset;
-    }
+@mixin center {
+  text-align: center;
+
+  .heading__link {
+    display: none;
+  }
+
+  @include lists {
+    justify-content: center;
   }
 }
 
-@include media_small {
-  // 余白を縮める
-  .section {
-    margin: 40px 10px;
+.section {
+  @include section;
+}
 
-    .frame--large {
-      padding: 60px 20px;
-    }
+.section--center {
+  @include section;
+  @include center;
+}
 
-    .frame--medium {
-      padding: 40px 20px;
-    }
+.section--center--gray {
+  @include section;
+  @include center;
 
-    .frame__contents {
-      flex-direction: column;
-    }
-  }
+  margin: 0;
+  padding: $section_top_bottom calc((100% - #{$section_width}) / 2);
+  background-color: $gray_lighter;
 }

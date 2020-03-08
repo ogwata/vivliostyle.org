@@ -1,90 +1,196 @@
-.button {
-  @extend a, .nostyle;
-
+@mixin button {
   display: flex;
   align-items: center;
-  padding: 9px 14px;
-  line-height: $button_line_height;
+  padding: 10px 15px;
   border: 1px solid transparent;
   border-radius: $border-radius;
+  line-height: $button_line_height;
+  font-size: $button_medium_font_size;
   background-color: transparent;
-  font-size: 20px;
-
-  &:link,
-  &:visited {
-    font-weight: 700;
-    color: $white;
-  }
+  text-decoration: none;
+  font-weight: $bold_font_weight;
 }
 
-.button__icon {
-  margin-right: 10px;
+@mixin large {
+  padding: 15px 20px;
+  font-size: $button_large_font_size;
 }
 
-.button--small {
-  @extend .button;
+@mixin medium {
+  padding: 10px 15px;
+  font-size: $button_medium_font_size;
+}
 
-  padding: 6px 8px;
+@mixin small {
+  padding: 5px 10px;
   border-radius: 4px;
-  border-color: $primary_color;
-  background-color: $primary_color;
-  font-size: 14px;
+  font-size: $button_small_font_size;
 }
 
-.button--medium {
-  @extend .button;
-
-  padding: 7px 14px;
-  border-color: $primary_color;
-  background-color: $primary_color;
-  font-size: 20px;
-}
-
-.button--large {
-  @extend .button;
-
-  padding: 12px 17px;
-  border-color: $primary_color;
-  background-color: $primary_color;
-  font-size: 24px;
-}
-
-.button--twitter {
-  @extend .button--medium;
-
-  border-color: $twitter_color;
-  background-color: $twitter_color;
-}
-
-.button--facebook {
-  @extend .button--medium;
-
-  border-color: $facebook_color;
-  background-color: $facebook_color;
-}
-
-.button--slack {
-  @extend .button--large;
-
-  border-color: $slack_color;
-  background-color: $slack_color;
-}
-
-.button--github {
-  @extend .button--large;
-
-  border-color: $github_color;
-  background-color: $github_color;
-}
-
-.button--large--secondary {
-  @extend .button--large;
-
-  border-color: $text_color;
-  background-color: $white;
+@mixin button_color($border_color, $background_color, $text_color) {
+  border-color: $border_color;
+  background-color: $background_color;
 
   &:link,
   &:visited {
     color: $text_color;
   }
+}
+
+@mixin primary {
+  @include button_color($primary_color, $primary_color, $white);
+}
+
+@mixin secondary {
+  @include button_color($black, $white, $black);
+}
+
+@mixin simple {
+  @include button_color(transparent, transparent, $text_color);
+}
+
+@mixin twitter {
+  @include button_color($twitter_color, $twitter_color, $white);
+}
+
+@mixin facebook {
+  @include button_color($facebook_color, $facebook_color, $white);
+}
+
+@mixin slack {
+  @include button_color($slack_color, $slack_color, $white);
+}
+
+@mixin github {
+  @include button_color($github_color, $github_color, $white);
+}
+
+.button--primary--small {
+  @include button;
+  @include primary;
+  @include small;
+}
+
+.button--primary--medium {
+  @include button;
+  @include primary;
+  @include medium;
+}
+
+.button--primary--large {
+  @include button;
+  @include primary;
+  @include large;
+}
+
+.button--secondary--small {
+  @include button;
+  @include secondary;
+  @include small;
+}
+
+.button--secondary--medium {
+  @include button;
+  @include secondary;
+  @include medium;
+}
+
+.button--secondary--large {
+  @include button;
+  @include secondary;
+  @include large;
+}
+
+.button--simple--small {
+  @include button;
+  @include simple;
+  @include small;
+}
+
+.button--simple--medium {
+  @include button;
+  @include simple;
+  @include medium;
+}
+
+.button--simple--large {
+  @include button;
+  @include simple;
+  @include large;
+}
+
+.button--twitter--small {
+  @include button;
+  @include twitter;
+  @include small;
+}
+
+.button--twitter--medium {
+  @include button;
+  @include twitter;
+  @include medium;
+}
+
+.button--twitter--large {
+  @include button;
+  @include twitter;
+  @include large;
+}
+
+.button--facebook--small {
+  @include button;
+  @include facebook;
+  @include small;
+}
+
+.button--facebook--medium {
+  @include button;
+  @include facebook;
+  @include medium;
+}
+
+.button--facebook--large {
+  @include button;
+  @include facebook;
+  @include large;
+}
+
+.button--slack--small {
+  @include button;
+  @include slack;
+  @include small;
+}
+
+.button--slack--medium {
+  @include button;
+  @include slack;
+  @include medium;
+}
+
+.button--slack--large {
+  @include button;
+  @include slack;
+  @include large;
+}
+
+.button--github--small {
+  @include button;
+  @include github;
+  @include small;
+}
+
+.button--github--medium {
+  @include button;
+  @include github;
+  @include medium;
+}
+
+.button--github--large {
+  @include button;
+  @include github;
+  @include large;
+}
+
+.button__icon {
+  margin-right: 10px;
 }

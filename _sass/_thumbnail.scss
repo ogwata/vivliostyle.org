@@ -1,10 +1,14 @@
-.thumbnail {
-  width: 320px;
+@mixin thumbnail($width, $height) {
+  width: $width;
+  height: $height;
   border-radius: $border_radius;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
 }
 
-@include media_medium {
+.container {
   .thumbnail {
-    width: 100%;
+    @include thumbnail(320px, auto);
   }
 }

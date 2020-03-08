@@ -1,0 +1,7 @@
+.page_sample {
+  @include media_large {
+    .sample-wrap {
+      @include list_column($gap_large, false);
+    }
+  }
+}

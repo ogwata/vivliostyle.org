@@ -1,23 +1,22 @@
-<ol class="frame-list">
+<ol class="list--medium--column">
   {% for post in include.posts %}
-    <li class="post-item">
-
-    {% include post-header.html
-      date=post.date
-      tags=post.tags
-    %}
+    <li class="frame--medium">
+      {% include post-header.html
+        date=post.date
+        tags=post.tags
+      %}
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="frame__link">
         <div class="frame__contents">
           <div class="post__text">
-            <h3 class="frame__title">{{ post.title }}</h3>
+            <h3>{{ post.title }}</h3>
             <p class="post__excerpt">
               {{ post.excerpt | strip_html | truncate: 200 }}
             </p>
           </div>
 
           {% if post.image %}
-            <div style="background-image: url({{ post.image }})" class="post__thumbnail"></div>
+            <img src="{{ post.image }}" class="thumbnail post__thumbnail">
           {% endif %}
         </div>
       </a>

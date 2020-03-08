@@ -1,39 +1,38 @@
 .page_home {
-
-  // ----------
-  // section
-  // ----------
-
-  .section {
+  @include sections {
     width: 100%;
     margin: 0;
     padding: 100px calc((100% - #{$section_width}) / 2);
     font-size: $display_font_size;
     color: $gray_dark;
 
-    .heading {
+    @include headings {
       &:first-child {
         margin-top: 0;
       }
     }
+
+    @include media_large {
+      // 幅を広げる
+      padding: 100px calc((100% - #{$section_width_large}) / 2);
+    }
   }
 
-  // ----------
-  // project__list
-  // ----------
-
   .project__list {
-    @extend .nostyle;
+    @include list_column(0px, false);
   }
 
   .project__innerlist {
-    @extend .nostyle;
-
-    display: flex;
+    @include list_row(0px, false);
 
     > * {
       flex: 1;
     }
+  }
+
+  .project__img {
+    width: 100%;
+    margin: $gap_small auto;
   }
 
   .project__link {
@@ -50,220 +49,17 @@
     font-size: $small_font_size;
   }
 
-  // ----------
-  // thumbnail-list
-  // ----------
-
-  .thumbnail-list {
-    > * {
-      margin: 0 50px 0 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
-  // ----------
-  // frame
-  // ----------
-
-  .frame {
-    font-size: $body_font_size;
-  }
-
-  // ----------
-  // animation
-  // ----------
-
-  #animation--flow {
-    @extend .nostyle;
-
-    display: flex;
-    justify-content: center;
-
-    .animation__img {
-      max-width: 340px;
-      margin-bottom: 50px;
-      transform: scale(0);
-    }
-
-    .animation__line {
-      display: flex;
-      align-items: center;
-      line-height: normal;
-    }
-
-    .animation__bar {
-      flex: auto;
-      height: 6px;
-      border-radius: 3px;
-      background-color: $gray_light;
-      background-size: 200%;
-      background-position: 100% 0%;
-    }
-
-    .animation__bar--none {
-      @extend .animation__bar;
-
-      background-color: transparent;
-    }
-
-    .animation__bar--left {
-      @extend .animation__bar;
-
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    .animation__bar--right {
-      @extend .animation__bar;
-
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    .animation__label {
-      padding: 10px 20px;
-      margin: 0 20px;
-      background-color: $gray_light;
-      color: $white;
-      font-weight: 700;
-      font-size: 24px;
-    }
-
-    @keyframes img__appeal {
-      0% { transform: scale(0); }
-      80% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    @keyframes step1__changecolor {
-      0% { background-color: $blue_dark; }
-      100% { background-color: $blue_dark; }
-    }
-
-    @keyframes step2__changecolor {
-      0% { background-color: $black; }
-      100% { background-color: $black; }
-    }
-
-    @keyframes step3__changecolor {
-      0% { background-color: $red; }
-      100% { background-color: $red; }
-    }
-
-    @keyframes line_progress {
-      0% { background-position: 100% 0%; }
-      100% { background-position: 0% 0%; }
-    }
-
-    #step1__img {
-      animation: img__appeal 0.5s ease-in-out 0s forwards;
-    }
-
-    #step1__text {
-      animation: img__appeal 0.5s ease-in-out 0s forwards,
-      step1__changecolor 0.5s ease-in-out 0s forwards;
-    }
-
-    #step1__right {
-      background-image: linear-gradient(90deg, $blue_dark 50%, $gray_light 0%);
-      animation: line_progress 0.8s ease-in 0.2s forwards;
-    }
-
-    #step2__left {
-      background-image: linear-gradient(90deg, $blue_dark 50%, $gray_light 0%);
-      animation: line_progress 0.8s ease-out 1s forwards;
-    }
-
-    #step2__img {
-      animation: img__appeal 0.5s ease-in-out 1.8s forwards;
-    }
-
-    #step2__text {
-      animation: img__appeal 0.5s ease-in-out 1.8s forwards,
-      step2__changecolor 0.5s ease-in-out 1.8s forwards;
-    }
-
-    #step2__right {
-      background-image: linear-gradient(90deg, $red 50%, $gray_light 0%);
-      animation: line_progress 0.8s ease-in 2.1s forwards;
-    }
-
-    #step3__left {
-      background-image: linear-gradient(90deg, $red 50%, $gray_light 0%);
-      animation: line_progress 0.8s ease-out 2.9s forwards;
-    }
-
-    #step3__img {
-      animation: img__appeal 0.5s ease-in-out 3.7s forwards;
-    }
-
-    #step3__text {
-      animation: img__appeal 0.5s ease-in-out 3.7s forwards,
-      step3__changecolor 0.5s ease-in-out 3.7s forwards;
-    }
-  }
-}
-
-@include media_large {
-  .page_home {
-    // 余白を縮める
-    .section {
-      padding: $section_top_bottom_large calc((100vw - #{$section_width_large}) / 2);
-    }
-  }
-}
-
-@include media_small {
-  .page_home {
-    // 隙間を小さく
-    .thumbnail-list {
-      > * {
-        margin: 0 0 20px 0;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    // 余白を縮める
-    .section {
-      font-size: $body_font_size;
-
-      h2 {
-        font-size: 30px;
-      }
-    }
-
+  @include media_small {
     .project__img {
-      margin: 10px 0;
+      margin: 0;
     }
 
     .project__link {
-      font-size: 20px;
+      font-size: 15px;
     }
 
     .project__description {
       display: none;
-    }
-
-    #animation--flow {
-      .animation__img {
-        margin: 0 0 20px 0;
-      }
-
-      .animation__label {
-        margin: 0 5px;
-        padding: 5px 10px;
-        font-size: 15px;
-      }
-
-      .animation__bar {
-        height: 4px;
-      }
     }
   }
 }

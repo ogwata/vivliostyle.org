@@ -54,19 +54,34 @@ $monospace_font:   "Roboto Mono";
 $vivliostyle_font: "Optima", "Marcellus";
 $icon_font:        "Material Design Icons";
 
-$h2_font_size: 44px;
-$h3_font_size: 34px;
-$h4_font_size: 28px;
-$h5_font_size: 22px;
-$h6_font_size: 18px;
-$body_font_size: 18px;
-$display_font_size: 26px;
+$h2_font_size:        44px;
+$h3_font_size:        34px;
+$h4_font_size:        28px;
+$h5_font_size:        22px;
+$h6_font_size:        18px;
+$body_font_size:      18px;
+$display_font_size:   26px;
 $monospace_font_size: 20px;
-$small_font_size: 16px;
+$small_font_size:     16px;
 
-$body_line_height: 1.8;
+$button_large_font_size:  24px;
+$button_medium_font_size: 20px;
+$button_small_font_size:  14px;
+
+$body_line_height:    1.8;
 $heading_line_height: 1.4;
-$button_line_height: 1.4;
+$button_line_height:  1.4;
+
+$thin_font_weight:        100;
+$extra_light_font_weight: 200;
+$light_font_weight:       300;
+$regular_font_weight:     400;
+$medium_font_weight:      500;
+$semi_bold_font_weight:   600;
+$bold_font_weight:        700;
+$extra_bold_font_weight:  800;
+$black_font_weight:       900;
+$body_font_weight:        $regular_font_weight;
 
 
 // ----------
@@ -81,27 +96,39 @@ $hover_animation: all 0.2s;
 // Section
 // ----------
 
-$section_width: 70vw;
-$section_top_bottom: 64px;
+$section_width:            70vw;
+$section_top_bottom:       64px;
 $section_first_top_bottom: 140px;
 
-$section_width_large: 90vw;
-$section_top_bottom_large: 64px;
+$section_width_large:            90vw;
+$section_top_bottom_large:       64px;
 $section_first_top_bottom_large: 64px;
+
+$gap_small:  10px;
+$gap_medium: 20px;
+$gap_large:  30px;
 
 
 // ----------
 // Breakpoint
 // ----------
 
-$breakpoint_large:  1200px;
+$breakpoint_large:  1400px;
 $breakpoint_medium: 960px;
 $breakpoint_small:  560px;
+
+
+// ----------
+// Search
+// ----------
+
+$searchfield_height: 50px;
+$searchresult_triangle_size: 30px;
 
 
 // ----------
 // Others
 // ----------
 
-$border_radius: 2px;
-$header_height: 80px;
+$border_radius:      2px;
+$header_height:      80px;

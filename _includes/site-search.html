@@ -3,14 +3,16 @@
     <div class="global-header__searchicon">
       <i class="mdi mdi-magnify"></i>
     </div>
-    <input class="global-header__input" id="search-form" type="search" name="search" placeholder="Search" autocomplete="off" />
+    <input class="global-header__input" id="search-form" type="text" name="search" placeholder="Search" autocomplete="off" />
   </div>
 
   <div class="global-header__searchresult" id="result-area">
     <header class="searchresult__header">
       <i class="mdi mdi-close searchresult__closeicon" id="close-icon"></i>
     </header>
-    <ul class="searchresult__list" id="result-list"></ul>
+    <div class="container">
+      <ul class="list--medium--column" id="result-list"></ul>
+    </div>
   </div>
 </form>
 
@@ -36,12 +38,12 @@
         const html = resultsArray.map(item => {
           return `
               <li class="frame--small">
-                <h3>
-                  <a href="${item.url}" class="frame__link">${item.title}</a>
-                </h3>
-                <div class="frame__contents">
-                  <p>${item.excerpt.slice(0,140)}</p>
-                </div>
+                <a href="${item.url}" class="frame__link">
+                  <h3>${item.title}</h3>
+                  <div class="frame__contents">
+                    <p>${item.excerpt.slice(0,140)}</p>
+                  </div>
+                </a>
               </li>`;
         }).join('');
         if ((resultsArray.length == 0) || (this.value == '')) {

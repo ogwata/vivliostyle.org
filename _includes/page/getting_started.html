@@ -2,26 +2,30 @@
   <div class="container">
     <h2>
       {{ include.cli_title }}
-      <!-- <span class="tip">{{ include.cli_tip }}</span> -->
+      {% if include.cli_tip %}
+        <span class="tip">{{ include.cli_tip }}</span>
+      {% endif %}
     </h2>
 
     {{ include.cli_description | markdownify }}
 
-    <div class="button-list">
-      {% include button/github.html link=include.cli_buttonlink_github text="README" %}
-    </div>
+    <ol class="list--medium">
+      <li>{% include button/github.html link=include.cli_buttonlink_github text="README" %}</li>
+    </ol>
 
-    <ol class="frame-list">
+    <ol class="list--medium--column">
       <li class="frame--large">
-        <h3>{{ include.cli_frame1_title }}</h3>
-
-        {{ include.cli_frame1_description | markdownify }}
+        <div class="container">
+          <h3>{{ include.cli_frame1_title }}</h3>
+          {{ include.cli_frame1_description | markdownify }}
+        </div>
       </li>
 
       <li class="frame--large">
-        <h3>{{ include.cli_frame2_title }}</h3>
-
-        {{ include.cli_frame2_description | markdownify }}
+        <div class="container">
+          <h3>{{ include.cli_frame2_title }}</h3>
+          {{ include.cli_frame2_description | markdownify }}
+        </div>
       </li>
     </ol>
   </div>
@@ -31,33 +35,16 @@
   <div class="container">
     <h2>
       {{ include.viewer_title }}
-      <!-- <span class="tip">{{ include.viewer_tip }}</span> -->
+      {% if include.cli_tip %}
+        <span class="tip">{{ include.viewer_tip }}</span>
+      {% endif %}
     </h2>
 
     {{ include.viewer_description | markdownify }}
 
-    <div class="button-list">
-      <a href="{{ include.viewer_buttonlink }}" class="button--large">{{ include.viewer_buttontext }}</a>
-      {% include button/github.html link=include.viewer_buttonlink_github text="README" %}
-    </div>
-
-    <ol class="frame-list">
-      <li class="frame--large">
-        <h3>{{ include.viewer_frame1_title }}</h3>
-
-        {{ include.viewer_frame1_description | markdownify }}
-
-        <ul class="thumbnail-list">
-          {% for item in include.viewer_gallery %}
-            <li>
-              <a href="{{ item.url }}">
-                <img src="{{ item.src | relative_url }}" class="thumbnail">
-                <p class="gallery__name">{{ item.name }}</p>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
+    <ol class="list--medium">
+      <li>{% include button/button.html link=include.viewer_buttonlink text=include.viewer_buttontext %}</li>
+      <li>{% include button/github.html link=include.viewer_buttonlink_github text="README" %}</li>
     </ol>
   </div>
 </section>
@@ -66,14 +53,16 @@
   <div class="container">
     <h2>
       {{ include.pub_title }}
-      <!-- <span class="tip">{{ include.pub_tip }}</span> -->
+      <!-- {% if include.cli_tip %} -->
+        <!-- <span class="tip">{{ include.pub_tip }}</span> -->
+      <!-- {% endif %} -->
     </h2>
 
     {{ include.pub_description | markdownify }}
 
-    <!-- <div class="button-list"> -->
-      <!-- <a href="{{ include.pub_buttonlink }}" class="button--large">{{ include.pub_buttontext }}</a> -->
-      <!-- {% include button/github.html link=include.pub_buttonlink_github text="README" %} -->
-    <!-- </div> -->
+    <!-- <ol class="list--medium"> -->
+      <!-- <li>{% include button/button.html link=include.pub_buttonlink text=include.pub_buttontext %}</li> -->
+      <!-- <li>{% include button/github.html link=include.pub_buttonlink_github text="README" %}</li> -->
+    <!-- </ol> -->
   </div>
 </section>

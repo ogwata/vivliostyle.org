@@ -2,47 +2,44 @@
 {% assign global_footer = site.data.global_footer[lang.code] %}
 
 <footer class="global-footer">
-  <div class="global-footer__container">
+  <nav class="global-footer__nav">
+    <ol class="nav__list">
+      {% for list in global_footer %}
+        <li class="nav__item">
+          <p class="links__groupname">
+            {{ list.title }}
+          </p>
 
-    <nav class="global-footer__nav">
-      <ol class="nav__list">
-        {% for list in global_footer %}
-          <li class="nav__item">
-            <p class="links__groupname">
-              {{ list.title }}
-            </p>
-
-            <ol class="links__list">
-              {% for item in list.links %}
-                <li class="links__item">
-                  <a class="links__link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                </li>
-              {% endfor %}
-            </ol>
-          </li>
-        {% endfor %}
-      </ol>
-    </nav>
-
-    <div class="global-footer__info">
-      <ul class="button-list--column">
-        <li>
-          {% include button/twitter.html text="Vivliostyle" link=site.social_links.Twitter %}
+          <ol class="links__list">
+            {% for item in list.links %}
+              <li class="links__item">
+                <a class="links__link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ol>
         </li>
-        <li>
-          {% include button/facebook.html text="Vivliostyle" link=site.social_links.Facebook %}
-        </li>
-      </ul>
+      {% endfor %}
+    </ol>
+  </nav>
 
-      <div class="global-footer__brand">
-        <a href="{{ lang.url | relative_url }}">
-          {% include logo.html class="global-footer__logo" %}
-        </a>
+  <div class="global-footer__info">
+    <ul class="global-footer__sns">
+      <li>
+        {% include button/twitter.html text="Vivliostyle" link=site.social_links.Twitter %}
+      </li>
+      <li>
+        {% include button/facebook.html text="Vivliostyle" link=site.social_links.Facebook %}
+      </li>
+    </ul>
 
-        <p>
-          <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
-        </p>
-      </div>
+    <div class="global-footer__brand">
+      <a href="{{ lang.url | relative_url }}">
+        {% include logo.html class="global-footer__logo" %}
+      </a>
+
+      <p>
+        <small>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</small>
+      </p>
     </div>
   </div>
 </footer>

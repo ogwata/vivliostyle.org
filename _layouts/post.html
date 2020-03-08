@@ -10,30 +10,34 @@ layout: default
 <main class="main">
   <article class="post">
     <section class="section">
-      {% include post-header.html
-        date=page.date
-        tags=page.tags
-      %}
-
-      <h2 class="post__title">{{ page.title }}</h2>
-
-      {% include post-author.html
-        author=page.author
-        members=members
-      %}
-
       <div class="container">
+        {% include post-header.html
+          date=page.date
+          tags=page.tags
+        %}
+
+        <h2 class="post__title">{{ page.title }}</h2>
+
+        {% include post-author.html
+          author=page.author
+          members=members
+        %}
+
         {{ content }}
       </div>
     </section>
   </article>
 
   <section class="section">
-    {% include nav-share.html %}
+    <div class="container">
+      {% include nav-share.html %}
+    </div>
   </section>
 
   <section class="section">
-    {% include post-related.html %}
+    <div class="container">
+      {% include post-related.html %}
+    </div>
   </section>
 </main>
 

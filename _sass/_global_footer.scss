@@ -1,125 +1,86 @@
 .global-footer {
-  margin-top: $section_top_bottom;
-  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: $section_first_top_bottom auto 0;
+  padding: 80px;
   background-color: $black;
   color: $white;
 
-  .global-footer__container {
-    width: 90vw;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
   .nav__list {
-    @extend .nostyle;
-
-    display: flex;
-    flex-wrap: wrap;
+    @include list_row(80px);
   }
 
   .nav__item {
-    display: flex;
-    flex-direction: column;
-    margin: 0 80px 40px 0;
+    @include list_column($gap_large);
+  }
 
-    &:last-child {
-      margin-right: 0;
+  .links__link {
+    &:link,
+    &:visited {
+      font-weight: $body_font_weight;
+      color: $white;
+      text-decoration: none;
     }
   }
 
   .links__groupname {
-    margin-bottom: 20px;
+    margin-bottom: $gap_medium;
     font-size: $h4_font_size;
-    font-weight: 700;
+    font-weight: $bold_font_weight;
   }
 
   .links__list {
-    @extend .nostyle;
+    @include list_column(0px, false);
 
     line-height: 2;
   }
 
-  .links__link {
-    @extend .nostyle;
+  .global-footer__info {
+    @include list_column(40px);
+
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
   }
 
-  .global-footer__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+  .global-footer__sns {
+    @include list_column($gap_small);
   }
 
   .global-footer__logo {
     width: auto;
     height: 50px;
-    margin: 40px 0 10px;
 
     .logo__text {
       fill: $white;
     }
   }
-}
 
-@include media_large {
-  // 余白を縮める
-  .global-footer {
-    padding: 60px 0;
-  }
-}
-
-@include media_medium {
-  .global-footer {
-    // 幅を縮める
-    .global-footer__container {
-      width: 80vw
-    }
-
-    // 縦に並べる
-    .global-footer__container {
-      flex-direction: column;
-    }
-
-    // ロゴを最初に持ってきて横並べ、左寄せ
-    .global-footer__info {
-      flex-direction: row-reverse;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .global-footer__logo {
-      margin: 0 40px 0 0;
-    }
-  }
-}
-
-@include media_small {
-  .global-footer {
-    // 縦に並べて中央揃え
-    .global-footer__container {
-      align-items: center;
-    }
+  @include media_medium {
+    flex-direction: column;
+    padding: 60px;
 
     .nav__list {
-      flex-direction: column;
-    }
+      @include list_column(40px, false);
 
-    .nav__item {
-      margin: 0 0 40px 0;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .global-footer__info {
-      width: 100%;
-      flex-direction: column;
+      @include list_row(40px, false);
+
       align-items: center;
+      justify-content: center;
       text-align: center;
     }
+  }
 
-    .global-footer__logo {
-      margin: 40px 0 0;
+  @include media_small {
+    .global-footer__info {
+      @include list_column(40px, false);
     }
   }
 }

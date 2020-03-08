@@ -1,5 +1,7 @@
 <section class="section">
-  <h2>{{ include.title }}</h2>
+  <div class="container">
+    <h2>{{ include.title }}</h2>
 
-  {% include post-list.html posts=include.posts %}
+    {% include post-list.html posts=include.posts %}
+  </div>
 </section>

@@ -1,104 +1,114 @@
+@mixin toc_item {
+  margin: calc(#{$gap_small} / 2) 0;
+  border-radius: $border-radius;
+  line-height: normal;
+  font-size: $small_font_size;
+  transition: $hover_animation;
+  cursor: pointer;
+
+  &:hover {
+    @include toc_item_active;
+  }
+
+  a {
+    display: inline-block;
+    padding: calc(#{$gap_small} / 2) $gap_small;
+    font-weight: $body_font_weight;
+
+    &:link,
+    &:visited {
+      color: $text_color;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin toc_item_active {
+  background-color: $blue_lighter;
+
+  a {
+    &:link,
+    &:visited {
+      font-weight: $bold_font_weight;
+    }
+  }
+}
+
 .with-toc {
   display: flex;
+  width: $section_width;
+  margin: 0 auto;
 
   .section {
-    flex: 2;
-    margin: calc(140px - 64px);
+    flex: 3;
+
+    &:first-of-type {
+      margin-top: calc(#{$section_first_top_bottom} - #{$section_top_bottom});
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .toc__nav {
     flex: 1;
+    margin: calc(#{$section_first_top_bottom} - #{$section_top_bottom}) auto $section_first_top_bottom;
   }
 
   .toc-list {
-    @extend .nostyle;
-
     position: sticky;
-    margin-right: 180px;
-    padding-top: 60px;
-    top: 100px;
-  }
-
-  .toc-list__item {
-    margin: 5px 0;
-    line-height: normal;
-    font-size: $small_font_size;
-    border-radius: $border-radius;
-    transition: $hover_animation;
-    cursor: pointer;
-
-    &:hover {
-      @extend .toc-list__item--active;
-    }
-
-    a {
-      @extend .nostyle;
-
-      display: inline-block;
-      padding: 5px 10px;
-    }
+    top: 220px;
+    padding-left: $gap_medium;
+    list-style: none;
   }
 
   .toc-list__item--active {
-    @extend .toc-list__item;
-
-    background-color: $blue_lighter;
-    font-weight: 700;
+    @include toc_item;
+    @include toc_item_active;
   }
 
   .toc-list__item--level2 {
-    @extend .toc-list__item;
+    @include toc_item;
 
     margin-left: 0px;
   }
 
   .toc-list__item--level3 {
-    @extend .toc-list__item;
+    @include toc_item;
 
     margin-left: 10px;
   }
 
   .toc-list__item--level4 {
-    @extend .toc-list__item;
+    @include toc_item;
 
     margin-left: 20px;
   }
 
   .toc-list__item--level5 {
-    @extend .toc-list__item;
+    @include toc_item;
 
     margin-left: 30px;
   }
 
   .toc-list__item--level6 {
-    @extend .toc-list__item;
+    @include toc_item;
 
     margin-left: 40px;
   }
-}
 
-@include media_large {
-  // 縦並びにする
-  .with-toc {
+  @include media_large {
+    // 縦並びにする
     flex-direction: column-reverse;
 
     // 通常の1カラム表示に合わせる
-    .section {
-      margin: auto;
-    }
+    width: 100%;
 
     // 通常の1カラム表示に合わせる
     .toc__nav {
       width: $section_width_large;
       margin: auto;
-    }
-  }
-}
-
-@include media_small {
-  .with-toc {
-    .toc__nav {
-      margin: 0;
     }
   }
 }

@@ -32,21 +32,25 @@
     <h2>{{ include.section1_title }}</h2>
     {{ include.section1_description | markdownify }}
 
-    <div class="thumbnail-list">
-      <a href="{{ include.pub_link }}">
-        <img src="{{ include.pub_thumbnail | relative_url }}" alt="" class="thumbnail">
-      </a>
-      <a href="{{ include.cli_link }}">
-        <img src="{{ include.cli_thumbnail | relative_url }}" alt="" class="thumbnail">
-      </a>
-    </div>
+    <ol class="list--large">
+      <li>
+        <a href="{{ include.pub_link }}">
+          <img src="{{ include.pub_thumbnail | relative_url }}" alt="" class="thumbnail">
+        </a>
+      </li>
+      <li>
+        <a href="{{ include.cli_link }}">
+          <img src="{{ include.cli_thumbnail | relative_url }}" alt="" class="thumbnail">
+        </a>
+      </li>
+    </ol>
 
-    <div class="button-list">
-      <!-- <a href="{{ include.pub_link }}" class="button--large">{{ include.pub_buttontext }}</a> -->
-      <a href="{{ include.pub_samplelink }}" class="button--large">{{ include.pub_buttonsampletext }}</a>
-      <span class="button">{{ include.or_text }}</span>
-      {% include button/github.html link=include.cli_link text=include.cli_buttontext %}
-    </div>
+    <ol class="list--medium">
+      <!-- {% include button/button.html link=include.pub_link text=include.pub_buttontext %} -->
+      <li>{% include button/button.html link=include.pub_samplelink text=include.pub_buttonsampletext %}</li>
+      <li><span class="button--simple--large">{{ include.or_text }}</span></li>
+      <li>{% include button/github.html link=include.cli_link text=include.cli_buttontext %}</li>
+    </ol>
   </div>
 </section>
 
@@ -55,15 +59,17 @@
     <h2>{{ include.section2_title }}</h2>
     {{ include.section2_description | markdownify }}
 
-    <div class="thumbnail-list">
-      <a href="{{ include.viewer_link }}">
-        <img src="{{ include.viewer_thumbnail | relative_url }}" alt="" class="thumbnail">
-      </a>
-    </div>
+    <ol class="list--large">
+      <li>
+        <a href="{{ include.viewer_link }}">
+          <img src="{{ include.viewer_thumbnail | relative_url }}" alt="" class="thumbnail">
+        </a>
+      </li>
+    </ol>
 
-    <div class="button-list">
-      <a href="{{ include.viewer_link }}" class="button--large">{{ include.viewer_buttontext }}</a>
-    </div>
+    <ol class="list--medium">
+      <li>{% include button/button.html link=include.viewer_link text=include.viewer_buttontext %}</li>
+    </ol>
   </div>
 </section>
 
@@ -110,9 +116,10 @@
 </section>
 
 <section class="section--center">
-  <h2>{{ include.section4_title }}</h2>
-
-  {% include post-list.html posts=include.posts %}
+  <div class="container">
+    <h2>{{ include.section4_title }}</h2>
+    {% include post-list.html posts=include.posts %}
+  </div>
 </section>
 
 <section class="section--center--gray">
@@ -120,12 +127,10 @@
     <h2>{{ include.section5_title }}</h2>
     {{ include.section5_description | markdownify }}
 
-    <div class="button-list">
-      {% include button/slack.html text=include.slack_buttontext %}
-      {% include button/github.html text=include.github_buttontext %}
-      <a href="{{ include.document_buttonlink }}" class="button--large">
-        {{ include.document_buttontext }}
-      </a>
-    </div>
+    <ol class="list--medium">
+      <li>{% include button/slack.html text=include.slack_buttontext %}</li>
+      <li>{% include button/github.html text=include.github_buttontext %}</li>
+      <li>{% include button/button.html link=include.document_buttontext text=include.document_buttontext %}</li>
+    </ol>
   </div>
 </section>

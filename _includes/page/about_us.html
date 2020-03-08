@@ -4,7 +4,7 @@
 
     {{ include.foundation_description | markdownify }}
 
-    <ol class="frame-list">
+    <ol class="list--medium--column">
       <li class="frame--medium">
         {{ include.foundation_text | markdownify }}
 
@@ -31,14 +31,12 @@
     <h2>{{ include.devteam_title }}</h2>
 
     {{ include.devteam_description | markdownify }}
-  </div>
 
-  <ul class="avatar-list" id="contributors-list"></ul>
+    <ul class="list--medium" id="contributors-list"></ul>
 
-  <div class="container">
-    <div class="button-list">
-      {% include button/slack.html text=include.slack_buttontext %}
-    </div>
+    <ol class="list--medium">
+      <li>{% include button/slack.html text=include.slack_buttontext %}</li>
+    </ol>
   </div>
 </section>
 
@@ -46,11 +44,11 @@
   <div class="container">
     <h2>{{ include.sponsor_title }}</h2>
 
-    <div class="button-list">
-      <a href="{{ include.advertisement_buttonlink }}" class="button--large">{{ include.advertisement_buttontext }}</a>
-      <a href="{{ include.congrat_buttonlink }}" class="button--large">{{ include.congrat_buttontext }}</a>
-      <a href="{{ include.github_buttonlink }}" class="button--large">{{ include.github_buttontext }}</a>
-    </div>
+    <ol class="list--medium">
+      <li>{% include button/button.html link=include.advertisement_buttonlink text=include.advertisement_buttontext %}</li>
+      <li>{% include button/button.html link=include.congrat_buttonlink text=include.congrat_buttontext %}</li>
+      <li>{% include button/button.html link=include.github_buttonlink text=include.github_buttontext %}</li>
+    </ol>
   </div>
 </section>
 

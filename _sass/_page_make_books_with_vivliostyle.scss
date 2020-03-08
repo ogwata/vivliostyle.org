@@ -1,20 +1,17 @@
 .page_make_books_with_vivliostyle {
   .frame__thumbnail {
-    width: 400px;
-    margin-right: 20px;
+    @include thumbnail(400px, auto);
   }
 
   .book__toc {
-    @extend .nostyle;
+    @include list_column(0px, false);
   }
 
   .toc__content {
-    display: flex;
+    @include list_row($gap_small, false);
   }
 
   .toc__type {
-    margin-right: 10px;
-    line-height: initial;
     font-size: $h5_font_size;
   }
 

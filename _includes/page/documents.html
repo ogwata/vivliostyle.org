@@ -20,7 +20,7 @@
 
     {{ include.plan_description | markdownify }}
 
-    <ol class="frame-list">
+    <ol class="list--medium--column">
       {% for plan in include.plans %}
         {% include plan.html
           title=plan.title
@@ -39,8 +39,8 @@
 
     {{ include.community_description | markdownify }}
 
-    <div class="button-list">
-      {% include button/slack.html text=include.slack_buttontext %}
-    </div>
+    <ol class="list--medium">
+      <li>{% include button/slack.html text=include.slack_buttontext %}</li>
+    </ol>
   </div>
 </section>

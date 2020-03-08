@@ -4,45 +4,39 @@
 
     {{ include.description | markdownify }}
 
-    <ol class="frame-list">
+    <ol class="list--medium--column">
       {% for book in include.books %}
         <li class="frame--large">
-          <h3>{{ book.title | markdownify }}</h3>
           <div class="container">
+            <h3>{{ book.title | markdownify }}</h3>
             {{ book.description | markdownify }}
-          </div>
 
-          <div class="frame__contents">
-            <a href="{{ book.web_buttonlink }}" class="frame__link">
-              <img src="{{ book.thumbnail | relative_url }}" alt="{{ book.title }}" class="frame__thumbnail">
-            </a>
+            <div class="frame__contents">
+              <a href="{{ book.web_buttonlink }}" class="frame__link">
+                <img src="{{ book.thumbnail | relative_url }}" alt="{{ book.title }}" class="frame__thumbnail">
+              </a>
 
-            <ol class="book__toc">
-              {% for article in book.toc %}
-                <li class="toc__content">
-                  <div>
-                    <i class="mdi mdi-alpha-{{ article.type | downcase }}-circle toc__type"></i>
-                  </div>
-                  <div>
-                    <a href="{{ article.url }}">{{ article.title }}</a>
-                    （{{ article.author }}）
-                  </div>
-                </li>
-              {% endfor %}
+              <ol class="book__toc">
+                {% for article in book.toc %}
+                  <li class="toc__content">
+                    <div>
+                      <i class="mdi mdi-alpha-{{ article.type | downcase }}-circle toc__type"></i>
+                    </div>
+                    <div>
+                      <a href="{{ article.url }}">{{ article.title }}</a>
+                      （{{ article.author }}）
+                    </div>
+                  </li>
+                {% endfor %}
+              </ol>
+            </div>
+
+            <ol class="list--medium">
+              <li>{% include button/button.html link=include.web_buttonlink text=include.web_buttontext %}</li>
+              <li>{% include button/button.html link=include.viewer_buttonlink text=include.viewer_buttontext class="button--secondary--large" %}</li>
+              <li>{% include button/button.html link=include.print_buttonlink text=include.print_buttontext class="button--secondary--large" %}</li>
+              <li>{% include button/github.html link=book.source_buttonlink text=include.source_buttontext %}</li>
             </ol>
-          </div>
-
-          <div class="button-list">
-            <a href="{{ book.web_buttonlink }}" class="button--large">
-              {{ include.web_buttontext }}
-            </a>
-            <a href="{{ book.viewer_buttonlink }}" class="button--large--secondary">
-              {{ include.viewer_buttontext }}
-            </a>
-            <a href="{{ book.print_buttonlink }}" class="button--large--secondary">
-              {{ include.print_buttontext }}
-            </a>
-            {% include button/github.html link=book.source_buttonlink text=include.source_buttontext %}
           </div>
         </li>
       {% endfor %}

@@ -3,22 +3,30 @@
 @import
   "reset",
   "variables",
-  "mixin",
+  "mixins",
 
+  // .container によらない
   "basic_elements",
-  "heading",
-  "button",
-  "thumbnail",
-  "list",
   "section",
-  "frame",
-  "post",
-  "avatar",
+  "button",
   "toc",
-
+  "search",
+  "jumbotron",
   "global_header",
   "global_footer",
 
+  // .container 内
+  "markdown_contents",
+  "heading",
+  "tip",
+  "thumbnail",
+  "list",
+  "frame",
+  "post",
+  "avatar",
+
+  "animation_home",
   "page_home",
+  "page_sample",
   "page_make_books_with_vivliostyle"
 ;
