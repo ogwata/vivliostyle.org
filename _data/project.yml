@@ -1,19 +1,21 @@
+# TODO: versions
+
 core:
-  version: ""
+  version: "v2.0.0"
   github: "https://github.com/vivliostyle/vivliostyle/tree/master/packages/core"
   thumbnail: "assets/project-core.png"
 pub:
-  version: ""
+  # version: ""
   url: ""
   github: ""
   sample: "/getting_started/#CSS組版で本を作りたい！"
   thumbnail: "assets/project-pub.png"
 cli:
-  version: ""
+  version: "v2.0.0"
   github: "https://github.com/vivliostyle/vivliostyle-cli"
   thumbnail: "assets/project-cli.png"
 viewer:
-  version: ""
+  version: "v2.0.0"
   url: "https://vivliostyle.org/viewer"
   github: "https://github.com/vivliostyle/vivliostyle/tree/master/packages/viewer"
   sample: "https://vivliostyle.org/viewer"
