@@ -251,7 +251,7 @@ HTML: 通常のHTML表示、ソース: GitHub上のソースファイル（HTML�
 %}{% assign categories = array %}
 
 
-{% include page/sample.html
+{% include page/samples.html
   categories=categories
 
   viewer_buttontext="Vivliostyle Viewer で見る"

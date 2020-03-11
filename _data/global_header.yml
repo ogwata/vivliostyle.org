@@ -1,8 +1,8 @@
 en:
   - title: Getting Started
     url: /getting_started/
-  - title: Sample
-    url: /sample/
+  - title: Samples
+    url: /samples/
   - title: Documents
     url: /documents/
   - title: FAQ
@@ -13,7 +13,7 @@ ja:
   - title: 使ってみる
     url: /ja/getting_started/
   - title: サンプル
-    url: /ja/sample/
+    url: /ja/samples/
   - title: ドキュメント
     url: /ja/documents/
   - title: FAQ

@@ -7,8 +7,8 @@ en:
         url: /getting_started#Vivliostyle Viewer
       - title: Vivliostyle Pub
         url: /getting_started#Vivliostyle Pub
-      - title: Sample
-        url: /sample
+      - title: Samples
+        url: /samples
   - title: documents
     links:
       - title: User Guide
@@ -45,7 +45,7 @@ ja:
       - title: Vivliostyle Pub
         url: /ja/getting_started#Vivliostyle Pub
       - title: サンプル
-        url: /ja/sample
+        url: /ja/samples
   - title: 開発する
     links:
       - title: ユーザーガイド
