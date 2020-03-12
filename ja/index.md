@@ -78,8 +78,8 @@ Vivliostyleプロジェクトでは、開発方針などをSlack上で話し合�
   or_text="または"
 
   core_link=site.data.project.core.github
-  pub_samplelink=site.data.project.pub.sample
+  pub_samplelink=site.data.project.pub.sample.ja
   pub_link=site.data.project.pub.github
   cli_link=site.data.project.cli.github
-  viewer_link=site.data.project.cli.sample
+  viewer_link=site.data.project.cli.sample.ja
 %}

@@ -8,11 +8,16 @@ pub:
   # version: ""
   url: ""
   github: ""
-  sample: "/getting_started/#CSS組版で本を作りたい！"
+  sample:
+    ja: "/ja/samples/"
+    en: "/samples/"
   thumbnail: "assets/project-pub.png"
 cli:
   version: "v2.0.0"
   github: "https://github.com/vivliostyle/vivliostyle-cli"
+  sample:
+    ja: "https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html"
+    en: "https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html"
   thumbnail: "assets/project-cli.png"
 viewer:
   version: "v2.0.0"

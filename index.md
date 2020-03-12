@@ -78,8 +78,8 @@ The Vivliostyle project discusses development matters on Slack. Please take a lo
   or_text="or"
 
   core_link=site.data.project.core.github
-  pub_samplelink=site.data.project.pub.sample
+  pub_samplelink=site.data.project.pub.sample.en
   pub_link=site.data.project.pub.github
   cli_link=site.data.project.cli.github
-  viewer_link=site.data.project.cli.sample
+  viewer_link=site.data.project.cli.sample.en
 %}
