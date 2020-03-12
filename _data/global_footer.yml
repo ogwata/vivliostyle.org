@@ -1,5 +1,5 @@
 en:
-  - title: getting_started
+  - title: Getting Started
     links:
       - title: Vivliostyle CLI
         url: /getting_started#Vivliostyle CLI
@@ -9,7 +9,7 @@ en:
         url: /getting_started#Vivliostyle Pub
       - title: Samples
         url: /samples
-  - title: documents
+  - title: Documents
     links:
       - title: User Guide
         url: /documents#User Guide
