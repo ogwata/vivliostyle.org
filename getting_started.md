@@ -36,6 +36,8 @@ $ vivliostyle build
 
 {% capture viewer_description %}
 A typesetting engine that runs on the browser. Read HTML and display the formatted result on the browser.
+
+![](/assets/screenshot-viewer.png)
 {% endcapture %}
 
 

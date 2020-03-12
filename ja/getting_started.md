@@ -37,6 +37,8 @@ $ vivliostyle build
 
 {% capture viewer_description %}
 ブラウザで動作する組版エンジン。HTML を読み込んで組版結果をブラウザに表示します。
+
+![](/assets/screenshot-viewer.png)
 {% endcapture %}
 
 
