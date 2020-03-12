@@ -1,2 +1,45 @@
-{% assign posts = site.related_posts | where: "lang", page.lang | slice: 0, 3 %}
-{% include post-list.html posts=posts %}
+<!-- previous_post -->
+{% assign post = page %}
+{% for count in site.posts %}
+  {% assign post = post.previous %}
+  {% unless post %}
+    {% break %}
+  {% endunless %}
+  {% if post.lang == page.lang %}
+    {% assign previous_post = post %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<!-- next_post -->
+{% assign post = page %}
+{% for count in site.posts %}
+  {% assign post = post.next %}
+  {% unless post %}
+    {% break %}
+  {% endunless %}
+  {% if post.lang == page.lang %}
+    {% assign next_post = post %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<ol class="list--large">
+  {% if previous_post %}
+    <li>
+      <a href="{{ previous_post.url }}">
+        <i class="mdi mdi-arrow-left-circle-outline"></i>
+        {{ previous_post.title }}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if next_post %}
+    <li>
+      <a href="{{ next_post.url }}">
+        {{ next_post.title }}
+        <i class="mdi mdi-arrow-right-circle-outline"></i>
+      </a>
+    </li>
+  {% endif %}
+</ol>
