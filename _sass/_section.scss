@@ -2,26 +2,22 @@
   margin: $section_top_bottom auto;
   width: $section_width;
 
-  &:first-child {
-    margin-top: $section_first_top_bottom;
-  }
-
-  &:last-child {
-    margin-bottom: $section_first_top_bottom;
-  }
-
   @include media_large {
     // 幅を広げる
     width: $section_width_large;
+  }
+}
 
-    // 一番上と一番下の余白を縮める
-    &:first-child {
-      margin-top: $section_first_top_bottom_large;
-    }
+@mixin section_color($background_color) {
+  width: 100%;
+  margin: 0;
+  padding: $section_top_bottom calc((100% - #{$section_width}) / 2);
+  background-color: $background_color;
 
-    &:last-child {
-      margin-bottom: $section_first_top_bottom_large;
-    }
+  @include media_large {
+    // 幅を広げる
+    width: 100%;
+    padding: $section_top_bottom calc((100% - #{$section_width_large}) / 2);
   }
 }
 
@@ -41,6 +37,11 @@
   @include section;
 }
 
+.section--gray {
+  @include section;
+  @include section_color($gray_lighter);
+}
+
 .section--center {
   @include section;
   @include center;
@@ -48,9 +49,6 @@
 
 .section--center--gray {
   @include section;
+  @include section_color($gray_lighter);
   @include center;
-
-  margin: 0;
-  padding: $section_top_bottom calc((100% - #{$section_width}) / 2);
-  background-color: $gray_lighter;
 }
