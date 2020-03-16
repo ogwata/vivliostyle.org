@@ -8,9 +8,9 @@ ja:
           - name: ページヘッダー
         urls:
           - name: 固定サイズ（縦組）
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
           - name: 可変ページサイズ
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/responsive.html
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/responsive.html
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
           - name: ソース
@@ -24,7 +24,7 @@ ja:
             - name: ページヘッダー
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
           - name: ソース
@@ -42,13 +42,13 @@ ja:
           - name: タチキリ塗り足し
         urls:
           - name: デフォルト（縦組）
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-v.css
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-v.css
           - name: デフォルト（横組）
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-h.css
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-h.css
           - name: 印刷用（縦組）
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-v.css&renderAllPages=true
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-v.css&renderAllPages=true
           - name: 印刷用（横組）
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-h.css&renderAllPages=true
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-h.css&renderAllPages=true
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html
           - name: ソース
@@ -62,7 +62,7 @@ ja:
           - name: 段組
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html&spread=false
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html&spread=false
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html
           - name: ソース
@@ -76,7 +76,7 @@ ja:
           - name: 段組
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml&spread=false
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml&spread=false
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml
           - name: ソース
@@ -92,7 +92,7 @@ ja:
           - name: Flexbox
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html&spread=false
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html&spread=false
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html
           - name: ソース
@@ -106,9 +106,9 @@ ja:
           - name: 段組
         urls:
           - name: 可変サイズ（縦組）
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/responsive.html
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/responsive.html
           - name: 固定サイズ（縦組）
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
           - name: ソース
@@ -124,9 +124,9 @@ ja:
             url: https://github.com/jagat-xpub/cosmology/blob/gh-pages/markup-notes.md#scholarly-html%E5%BD%A2%E5%BC%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
         urls:
           - name: ページフロート有
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://jagat-xpub.github.io/cosmology/&style=https://jagat-xpub.github.io/cosmology/css/page-float.css
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://jagat-xpub.github.io/cosmology/&style=https://jagat-xpub.github.io/cosmology/css/page-float.css
           - name: ページフロート無
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://jagat-xpub.github.io/cosmology/
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://jagat-xpub.github.io/cosmology/
           - name: HTML
             url: https://jagat-xpub.github.io/cosmology/
           - name: ソース
@@ -142,9 +142,9 @@ ja:
           - name: 複数HTML
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true
           - name: 印刷用
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html
           - name: ソース
@@ -158,9 +158,9 @@ ja:
           - name: 複数HTML
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true
           - name: 印刷用
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html
           - name: ソース
@@ -174,9 +174,9 @@ ja:
           - name: 複数HTML
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true
           - name: 印刷用
-            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
+            url: https://vivliostyle.org/viewer/#bookMode=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html
           - name: ソース

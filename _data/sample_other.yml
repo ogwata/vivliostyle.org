@@ -9,7 +9,7 @@ ja:
           - name: ページヘッダー
         urls:
           - name: デフォルト
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
           - name: ソース
@@ -20,7 +20,7 @@ ja:
           - name: 脚注
         urls:
           - name: 可変サイズ
-            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
+            url: https://vivliostyle.org/viewer/#src=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
           - name: ソース
@@ -30,7 +30,7 @@ ja:
           - name: レスポンシブ
         urls:
           - name: デフォルト（縦組）
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/ja-vertical/Takasebune/main.xhtml
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/ja-vertical/Takasebune/main.xhtml
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/ja-vertical/Takasebune/main.xhtml
           - name: ソース
@@ -45,7 +45,7 @@ ja:
             url: http://idpf.org/epub/pgt/
         urls:
           - name: デフォルト
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/candle/index.xhtml&spread=false
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/candle/index.xhtml&spread=false
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/candle/index.xhtml
           - name: ソース
@@ -61,7 +61,7 @@ ja:
             url: http://idpf.org/epub/pgt/
         urls:
           - name: デフォルト
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/adaptive/main.xhtml&spread=false
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/adaptive/main.xhtml&spread=false
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/adaptive/main.xhtml
           - name: ソース
@@ -72,9 +72,9 @@ ja:
           - name: ウェブフォント
         urls:
           - name: Justification ＆hyphenation 有
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/wood/index.html
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://vivliostyle.github.io/vivliostyle_doc/samples/wood/index.html
           - name: Justification ＆hyphenation 無
-            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/wood_chrome/index.html
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#src=https://vivliostyle.github.io/vivliostyle_doc/samples/wood_chrome/index.html
           - name: HTML
             url: https://vivliostyle.github.io/vivliostyle_doc/samples/wood/index.html
           - name: ソース
