@@ -4,9 +4,7 @@
 <header class="global-header">
   <div class="global-header__brand">
     <a href="{{ lang.url | relative_url }}">
-      <h1>
-        <img class="global-header__logo" src="{{ site.logo | relative_url }}" alt="{{ site.title | append: ' logo' }}"/>
-      </h1>
+      <img class="global-header__logo" src="{{ site.logo | relative_url }}" alt="{{ site.title | append: ' logo' }}"/>
     </a>
 
     {% include site-search.html %}
