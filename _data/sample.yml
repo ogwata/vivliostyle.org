@@ -1,164 +1,183 @@
 ja:
-  technical:
-    name: 技術書
-    vivliostyle_vol1:
-      name: 『Vivliostyle で本を作ろう Vol.1』
-      img: assets/samples/vug-vol1.png
-      tags:
-        - 目次
-        - ページヘッダー
-        - 脚注
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true
-          print: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
-          html: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/ja/vivliostyle-user-group-vol1
-    vivliostyle_vol2:
-      name: 『Vivliostyle で本を作ろう Vol.2』
-      img: assets/samples/vug-vol2.png
-      tags:
-        - 目次
-        - ページヘッダー
-        - 脚注
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true
-          print: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
-          html: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/ja/vivliostyle-user-group-vol2
-    vivliostyle_vol3:
-      name: 『Vivliostyle で本を作ろう Vol.3』
-      img: assets/samples/vug-vol3.png
-      tags:
-        - 目次
-        - ページヘッダー
-        - 脚注
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true
-          print: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
-          html: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/ja/vivliostyle-user-group-vol3
-  novel:
-    name: 小説
-    gutenberg:
-      name: 英語小説
-      img: assets/samples/alice.png
-      tags:
-        - レスポンシブ
-        - ウェブフォント
-        - ページカウンタ
-        - 相互参照
-        - ページヘッダー
-      urls:
-        - name: “Alice’s Adventures in Wonderland”
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gutenberg/
-        - name: “The Adventures of Sherlock Holmes”
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gutenberg/
-        - name: “White Fang”
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Fang.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Fang.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gutenberg/
-    gon:
-      name: 文庫本フォーマット『ごん狐』
-      img: assets/samples/gon.png
-      tags:
-        - 縦書き
-        - ルビ
-        - ページヘッダー
-      urls:
-        - name: 固定ページサイズ
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gon
-        - name: 可変ページサイズ
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/responsive.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/gon/responsive.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gon
-  magazine_news:
-    name: 雑誌・新聞
-    webmag:
-      name: Web 雑誌 “JDIR”
-      img: assets/samples/webmag.png
-      tags:
-        - 段組
-        - ページテンプレート
-        - レスポンシブ
-        - 目次
-        - 印刷用のトンボと塗り足し
-      urls:
-        - name: 横書き
-          viewer: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-h.css
-          print: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-h.css&renderAllPages=true
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/webmag
-        - name: 縦書き
-          viewer: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-v.css
-          print: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-v.css&renderAllPages=true
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/webmag
-    apollo8:
-      name: Apollo 8
-      img: assets/samples/apollo.png
-      tags:
-        - 回り込み
-        - 段組
-        - レスポンシブ
-        - ページテンプレート
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml&spread=false
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/adaptive-layout/apollo8
-    shirouma:
-      name: 雑誌レイアウト『白馬岳』
-      img: assets/samples/shirouma.png
-      tags:
-        - 縦書き
-        - ルビ
-        - 段組
-      urls:
-        - name: 固定ページサイズ
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/shirouma
-        - name: 可変ページサイズ
-          viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/responsive.html
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/responsive.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/shirouma
-    news:
-      name: 新聞
-      img: assets/samples/news.png
-      tags:
-        - 段組
-        - ページテンプレート
-        - レスポンシブ
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html&spread=false
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/news
-  article:
-    name: 記事
-    scholarly:
-      name: 学術論文 “Scholarly HTML”
-      img: assets/samples/scholarly.png
-      tags:
-        - 段組
-        - ページテンプレート
-        - ウェブフォント
-        - スクロールとページ
-        - Flexbox
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html&spread=false
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/scholarly
-    malay:
-      name: 英語記事 “The Malay Archipelago”
-      img: assets/samples/malay.png
-      tags:
-        - 段組
-        - レスポンシブ
-        - 脚注
-      urls:
-        - viewer: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
-          html: https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
-          source: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/variable-page-size/TheMalayArchipelago
+  - category: 単純な長文組版
+    samples:
+      - name: ごん狐（書籍）
+        img: assets/samples/gon.png
+        tags:
+          - name: ルビ
+          - name: ページヘッダー
+        urls:
+          - name: 固定サイズ（縦組）
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
+          - name: 可変ページサイズ
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gon/responsive.html
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/gon/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gon
+      - name: Alice’s Adventures in Wonderland（書籍）
+        img: assets/samples/alice.png
+        tags:
+            - name: ウェブフォント
+            - name: ページカウンタ
+            - name: 目次
+            - name: ページヘッダー
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Alice.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gutenberg/
+  - category: EPUB Adaptive Layout (EAL) による複雑な組版
+    samples:
+      - name: JDIR（雑誌）
+        img: assets/samples/webmag.png
+        tags:
+          - name: EAL
+            url: http://idpf.org/epub/pgt/
+          - name: 段組
+          - name: 目次
+          - name: 複数HTML
+          - name: タチキリ塗り足し
+        urls:
+          - name: デフォルト（縦組）
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-v.css
+          - name: デフォルト（横組）
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-style-h.css
+          - name: 印刷用（縦組）
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-v.css&renderAllPages=true
+          - name: 印刷用（横組）
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html&style=https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/css/viv-print-h.css&renderAllPages=true
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/webmag/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/webmag
+        comment: このサンプルは株式会社日本ビジネスプレスの承諾をいただき、“[JDIR JBpress Digital Innovation Review”](http://jbpress.ismedia.jp/feature/jdir) の記事を掲載したものです
+      - name: The Vivlio Daily（新聞）
+        img: assets/samples/news.png
+        tags:
+          - name: EAL
+            url: http://idpf.org/epub/pgt/
+          - name: 段組
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html&spread=false
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/news/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/news
+      - name: Apollo 8（雑誌）
+        img: assets/samples/apollo.png
+        tags:
+          - name: EAL
+            url: http://idpf.org/epub/pgt/
+          - name: 回り込み
+          - name: 段組
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml&spread=false
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/apollo8/index.xhtml
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/adaptive-layout/apollo8
+        comment: from Peter Sorotokin’s [Adaptive Layout](https://github.com/sorotokin/adaptive-layout)
+      - name: Scholarly HTML（論文）
+        img: assets/samples/scholarly.png
+        tags:
+          - name: EAL
+            url: http://idpf.org/epub/pgt/
+          - name: 段組
+          - name: ウェブフォント
+          - name: Flexbox
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html&spread=false
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/scholarly/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/scholarly
+  - category: 多段組／図版の段抜き配置
+    samples:
+      - name: 白馬岳（雑誌）
+        img: assets/samples/shirouma.png
+        tags:
+          - name: ルビ
+          - name: 段組
+        urls:
+          - name: 可変サイズ（縦組）
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/responsive.html
+          - name: 固定サイズ（縦組）
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/shirouma/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/shirouma
+      - name: 宇宙論入門（論文）
+        img: assets/samples/cosmology.png
+        tags:
+          - name: 段組
+          - name: ページフロート
+          - name: 数式
+            url: https://github.com/jagat-xpub/cosmology/blob/gh-pages/markup-notes.md#%E6%95%B0%E5%BC%8F
+          - name: Scholarly HTML
+            url: https://github.com/jagat-xpub/cosmology/blob/gh-pages/markup-notes.md#scholarly-html%E5%BD%A2%E5%BC%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+        urls:
+          - name: ページフロート有
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://jagat-xpub.github.io/cosmology/&style=https://jagat-xpub.github.io/cosmology/css/page-float.css
+          - name: ページフロート無
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://jagat-xpub.github.io/cosmology/
+          - name: HTML
+            url: https://jagat-xpub.github.io/cosmology/
+          - name: ソース
+            url: https://github.com/jagat-xpub/cosmology
+  - category: 目次と複数のHTMLからなる雑誌
+    samples:
+      - name: Vivliostyle で本を作ろう Vol.1
+        img: assets/samples/vug-vol1.png
+        tags:
+          - name: 目次
+          - name: ページヘッダー
+          - name: 脚注
+          - name: 複数HTML
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true
+          - name: 印刷用
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol1/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/ja/vivliostyle-user-group-vol1
+      - name: Vivliostyle で本を作ろう Vol.2
+        img: assets/samples/vug-vol2.png
+        tags:
+          - name: 目次
+          - name: ページヘッダー
+          - name: 脚注
+          - name: 複数HTML
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true
+          - name: 印刷用
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol2/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/ja/vivliostyle-user-group-vol2
+      - name: Vivliostyle で本を作ろう Vol.3
+        img: assets/samples/vug-vol3.png
+        tags:
+          - name: 目次
+          - name: ページヘッダー
+          - name: 脚注
+          - name: 複数HTML
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true
+          - name: 印刷用
+            url: https://vivliostyle.org/viewer/#b=https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html&renderAllPages=true&userStyle=data:,/*%3Cviewer%3E*/%0A/*%3C/viewer%3E*/%0A@page%7Bmarks:crop%20cross;bleed:3mm%7D
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/ja/vivliostyle-user-group-vol3/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/ja/vivliostyle-user-group-vol3

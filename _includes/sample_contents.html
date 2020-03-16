@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="list--small--column">
+    <ul class="list--small">
+      {% for item in include.sample.urls %}
+        {% if item.url contains 'github.com' %}
+          <li>{% include button/github.html link=item.url text=item.name class="button--github--medium" %}</li>
+        {% else %}
+          <li>{% include button/button.html link=item.url text=item.name class="button--secondary--medium" %}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <ul class="list--small">
+      {% for tag in include.sample.tags %}
+        <li class="tip">
+          {% if tag.url %}
+            <a href="{{ tag.url }}">{{ tag.name }}</a>
+          {% else %}
+            {{ tag.name }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if include.sample.comment %}
+    <p>{{ include.sample.comment | markdownify }}</p>
+  {% endif %}
+</div>

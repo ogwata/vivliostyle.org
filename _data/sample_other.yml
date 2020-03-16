@@ -1,0 +1,81 @@
+ja:
+  - category: その他
+    samples:
+      - name: The Adventures of Sherlock Holmes（書籍）
+        tags:
+          - name: ウェブフォント
+          - name: ページカウンタ
+          - name: 目次
+          - name: ページヘッダー
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/gutenberg/Sherlock.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/gutenberg/
+      - name: The Malay Archipelago（雑誌）
+        tags:
+          - name: 段組
+          - name: 脚注
+        urls:
+          - name: 可変サイズ
+            url: https://vivliostyle.org/viewer/#x=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/TheMalayArchipelago/main.xhtml
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/variable-page-size/TheMalayArchipelago
+      - name: 高瀬舟（書籍）
+        tags:
+          - name: レスポンシブ
+        urls:
+          - name: デフォルト（縦組）
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/ja-vertical/Takasebune/main.xhtml
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/variable-page-size/ja-vertical/Takasebune/main.xhtml
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/variable-page-size/ja-vertical/Takasebune
+      - name: Candle（書籍）
+        tags:
+          - name: ウェブフォント
+          - name: ページカウンタ
+          - name: 目次
+          - name: ページヘッダー
+          - name: EAL
+            url: http://idpf.org/epub/pgt/
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/candle/index.xhtml&spread=false
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/candle/index.xhtml
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/adaptive-layout/candle
+        comment: from Peter Sorotokin’s [Adaptive Layout](https://github.com/sorotokin/adaptive-layout)
+      - name: Advanced Adaptive Layout（雑誌）
+        tags:
+          - name: ウェブフォント
+          - name: ページカウンタ
+          - name: 目次
+          - name: ページヘッダー
+          - name: EAL
+            url: http://idpf.org/epub/pgt/
+        urls:
+          - name: デフォルト
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/adaptive/main.xhtml&spread=false
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/adaptive-layout/adaptive/main.xhtml
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/adaptive-layout/adaptive
+        comment: from Peter Sorotokin’s [Adaptive Layout](https://github.com/sorotokin/adaptive-layout)
+      - name: Wood Engraving（書籍）
+        tags:
+          - name: ウェブフォント
+        urls:
+          - name: Justification ＆hyphenation 有
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/wood/index.html
+          - name: Justification ＆hyphenation 無
+            url: https://vivliostyle.github.io/vivliostyle.js/viewer/vivliostyle-viewer.html#x=https://vivliostyle.github.io/vivliostyle_doc/samples/wood_chrome/index.html
+          - name: HTML
+            url: https://vivliostyle.github.io/vivliostyle_doc/samples/wood/index.html
+          - name: ソース
+            url: https://github.com/vivliostyle/vivliostyle_doc/tree/gh-pages/samples/wood

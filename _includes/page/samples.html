@@ -1,57 +1,44 @@
-{% for category in include.categories %}
+<section class="section--gray">
+  <div class="container">
+    <h1>{{ include.title }}</h1>
+    <p>{{ include.lead }}</p>
+  </div>
+</section>
+
+{% for category in include.sample %}
   <section class="section page_sample">
     <div class="container">
-      <h2>{{ category.title }}</h2>
-
-      {{ category.description | markdownify }}
+      <h2>{{ category.category }}</h2>
 
       <ol class="list--medium--column">
         {% for sample in category.samples %}
           <li class="frame--large">
-            <h3>{{ sample.title }}</h3>
+            <h3>{{ sample.name }}</h3>
 
             <div class="frame__contents sample-wrap">
-              <a href="{{ sample.urls[0].viewer }}">
+              <a href="{{ sample.urls[0].url }}">
                 <img src="{{ sample.img | relative_url }}" class="thumbnail">
               </a>
 
-              <div class="container">
-                {{ sample.description | markdownify }}
-
-                <ul class="list--small--column">
-                  {% for item in sample.urls %}
-                    <li>
-                      {% if item.name %}
-                        <h4>{{ item.name }}</h4>
-                      {% endif %}
-                      <ol class="list--medium">
-                        {% if item.viewer %}
-                          <li>{% include button/button.html link=item.viewer text=include.viewer_buttontext class="button--secondary--medium" %}</li>
-                        {% endif %}
-                        {% if item.print %}
-                          <li>{% include button/button.html link=item.print text=include.print_buttontext class="button--secondary--medium" %}</li>
-                        {% endif %}
-                        {% if item.html %}
-                          <li>{% include button/button.html link=item.html text=include.html_buttontext class="button--secondary--medium" %}</li>
-                        {% endif %}
-                        {% if item.source %}
-                          <li>{% include button/github.html link=item.source text=include.source_buttontext class="button--github--medium" %}</li>
-                        {% endif %}
-                      </ol>
-                    </li>
-                  {% endfor %}
-                </ul>
-
-                <ul class="list--small">
-                  {% for tag in sample.tags %}
-                    <li class="tip">{{ tag }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
+              {% include sample_contents.html sample=sample %}
             </div>
           </li>
         {% endfor %}
       </ol>
+    </div>
+  </section>
+{% endfor %}
+
+{% for category in include.sample_other %}
+  <section class="section page_sample">
+    <div class="container">
+      <h2>{{ category.category }}</h2>
+
+      {% for sample in category.samples %}
+        <h3>{{ sample.name }}</h3>
+
+        {% include sample_contents.html sample=sample %}
+      {% endfor %}
     </div>
   </section>
 {% endfor %}
